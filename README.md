@@ -108,6 +108,21 @@ The result is shown below.
     </tr>
 </table> -->
 
+### Collect Data
+We also provide an example shell script to collect data.
+```shell
+  cd [path_to_this_repo]/Simulation
+  bash scripts/franka_slider_open_lever_door_collect_data.sh
+```
+
+### Traning
+We provide training scripts for our model.
+```shell
+  cd [path_to_this_repo]/multimodal
+  bash scripts/train_[model].sh
+```
+
+
 ## Citation
 If you find our project useful, welcome to cite our paper
 ```

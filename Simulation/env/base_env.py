@@ -864,6 +864,22 @@ class BaseEnv():
             self.mkdir(os.path.join(self.log_dir, self.collect_data_path))
             torch.save(out, os.path.join(self.log_dir, self.collect_data_path, "data_{}.pt".format(self.seed)))
     
+    def mkdir(self, path):
+        # 去除首位空格
+        path = path.strip()
+        # 去除尾部 \ 符号
+        path = path.rstrip("\\")
+        # 判断路径是否存在
+        isExists = os.path.exists(path)
+        if not isExists:
+            # 如果不存在则创建目录
+            # 创建目录操作函数
+            os.makedirs(path)
+            return True
+        else:
+            # 如果目录存在则不创建，并提示目录已存在
+            return False
+    
     def compute_point_cloud_state(self, depth_bar):
         camera_props = gymapi.CameraProperties()
         camera_props.width = 256

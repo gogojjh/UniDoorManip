@@ -266,7 +266,7 @@ if __name__ == '__main__':
     parser.add_argument('--model_version', type=str, default='model_actor', help='model def file')
     parser.add_argument('--device_id', type=int, default=0, help='cpu or cuda:x for using cuda on GPU number x')
 
-    parser.add_argument('--log_dir', type=str, default='../../robot_arm_models', help='exp logs directory')
+    parser.add_argument('--log_dir', type=str, default='../robot_arm_models', help='exp logs directory')
     parser.add_argument('--overwrite', action='store_true', default=False,
                         help='overwrite if exp_dir exists [default: False]')
 

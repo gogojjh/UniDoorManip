@@ -1,0 +1,1 @@
+python train_critic.py --model_version=model_critic --exp_suffix=lever_pull_critic --epoch=300 --process_data_path=../robot_arm_data/process_data/open_lever_pull_right_critic_multistep --device_id=0 --log_dir=../robot_arm_models

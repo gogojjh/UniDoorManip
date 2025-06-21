@@ -1,3 +1,8 @@
 Datasets
 __pycache__
 Simulation/env/utils/__pycache__/*
+Simulation/env/__pycache__/
+assets/
+generated_datasets/
+logs/
+robot_arm_models/

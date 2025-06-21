@@ -206,8 +206,8 @@ if __name__ == '__main__':
     parser.add_argument('--model_version', type=str, default='model_critic', help='model def file')
     parser.add_argument('--device_id', type=int, default=2, help='cpu or cuda:x for using cuda on GPU number x')
     
-    parser.add_argument('--data_path', type=str, default='../logs/franka_slider_door', help='data path')
-    parser.add_argument('--data_num', type=int, default=11, help='data num')
+    # parser.add_argument('--data_path', type=str, default='../logs/franka_slider_door', help='data path')
+    # parser.add_argument('--data_num', type=int, default=11, help='data num')
     parser.add_argument('--process_data_path', type=str, default='../logs/process_data/open_lever_pull_right_critic_multistep', help='process data path')
 
     # main parameters (optional)

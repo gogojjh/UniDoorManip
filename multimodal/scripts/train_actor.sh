@@ -1,0 +1,1 @@
+python train_actor.py --model_version=model_actor --exp_suffix=lever_pull_actor --epoch=500 --process_data_path=../../robot_arm_data/process_data/actor_multistep_one --device_id=0 --log_dir=../robot_arm_models

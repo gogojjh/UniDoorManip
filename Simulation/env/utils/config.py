@@ -124,6 +124,9 @@ def load_cfg(args):
     cfg["name"] = args.task
     cfg["headless"] = args.headless
     cfg["seed"] = args.seed
+    cfg["env"]["collectDataPath"] = args.collect_data_path
+    cfg["env"]["collectData"] = args.collect_data
+    cfg["env"]["modeltest"] = args.test
 
     logdir = args.logdir
 
@@ -184,7 +187,14 @@ def get_args():
             "help": "Number of objects to validate - override config file"},
         {"name": "--episode_length", "type": int, "default": 0,
             "help": "Episode length, by default is read from yaml config"},
-        {"name": "--seed", "type": int, "help": "Random seed"}]
+        {"name": "--seed", "type": int, "help": "Random seed"},
+        {"name": "--collect_data_path", "type": str, "default": "",
+            "help": "Collect data path"},
+        {"name": "--collect_data", "type": bool, "default": False, "action": "store_true",
+            "help": "Collect data, if True, will collect data to the path"},
+        {"name": "--test", "type": bool, "default": False, "action": "store_true",
+            "help": "Test model"},
+    ]
 
     # parse arguments
     args = gymutil.parse_arguments(
