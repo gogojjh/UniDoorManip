@@ -36,6 +36,8 @@ conda activate unidoormanip
 
 echo "Installing PyTorch and other packages..."
 pip install torch==1.13.1 torchvision==0.14.1 ipdb trimesh
+pip install numpy==1.19
+
 
 # Step 3: Install PointNet++
 echo ""
@@ -52,6 +54,10 @@ fi
 cd Pointnet2_PyTorch
 pip install -r requirements.txt
 pip install -e .
+
+cd ../
+git clone https://github.com/facebookresearch/pytorch3d.git &&  cd pytorch3d && pip install -e .
+cd ../
 
 echo ""
 echo "=========================================="
