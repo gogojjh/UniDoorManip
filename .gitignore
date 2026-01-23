@@ -6,3 +6,4 @@ assets/
 generated_datasets/
 logs/
 robot_arm_models/
+Simulation/env/utils/__pycache__/*.pyc
