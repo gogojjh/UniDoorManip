@@ -22,9 +22,5 @@ docker pull nvidia/cuda:11.7.1-devel-ubuntu20.04 || {
     sed -i 's|nvidia/cuda:11.7.1-devel-ubuntu20.04|nvidia/cuda:11.7.0-devel-ubuntu20.04|g' Dockerfile
 }
 
-# Build the image
-echo "Building the image..."
-docker build -t nvidia_docker:ubuntu2004_cuda117_torch1131 -f Dockerfile .
-
 echo "Docker image built successfully!"
 echo "Image: nvidia_docker:ubuntu2004_cuda117_torch1131"

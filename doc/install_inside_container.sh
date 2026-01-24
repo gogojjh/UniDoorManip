@@ -7,7 +7,6 @@ echo "=========================================="
 echo "UniDoorManip Installation Script"
 echo "=========================================="
 
-
 apt update && apt install -y git vim locate wget tar curl
 apt-get install -y libvulkan1 vulkan-tools
 vulkaninfo | grep "GPU"
@@ -37,7 +36,6 @@ conda activate unidoormanip
 echo "Installing PyTorch and other packages..."
 pip install torch==1.13.1 torchvision==0.14.1 ipdb trimesh
 pip install numpy==1.19
-
 
 # Step 3: Install PointNet++
 echo ""
