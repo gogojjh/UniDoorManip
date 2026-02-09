@@ -21,6 +21,7 @@ docker run -it \
     -v ~/.Xauthority:/root/.Xauthority:rw \
     -v ~/robohike_ws/src:/Titan/code/robohike_ws/src \
     -v /Titan/dataset/:/Titan/dataset \
+    -v /Rocket_ssd/dataset/:/Rocket_ssd/dataset \
     --network host \
     --name unidoormanip nvidia/cuda:11.7.1-devel-ubuntu20.04 /bin/bash
 
