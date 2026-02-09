@@ -862,6 +862,7 @@ class BaseEnv():
             out["collect_flag"] = collect_flag
 
             self.mkdir(os.path.join(self.log_dir, self.collect_data_path))
+            print(f'Saving data to {os.path.join(self.log_dir, self.collect_data_path, "data_{}.pt".format(self.seed))}')
             torch.save(out, os.path.join(self.log_dir, self.collect_data_path, "data_{}.pt".format(self.seed)))
     
     def mkdir(self, path):

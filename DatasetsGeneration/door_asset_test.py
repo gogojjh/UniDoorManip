@@ -8,17 +8,15 @@ distribution of this software and related documentation without an express
 license agreement from NVIDIA CORPORATION is strictly prohibited.
 
 
-DOF control methods example
----------------------------
-An example that demonstrates various DOF control methods:
-- Load cartpole asset from an urdf
-- Get/set DOF properties
-- Set DOF position and velocity targets
-- Get DOF positions
-- Apply DOF efforts
+UniDoorManip Asset Visualization Tool
+-------------------------------------
+Visualize different types of door/cabinet/window assets from the generated datasets.
+Usage: python door_asset_test.py --example_id <ID>
 """
 
+import os
 import math
+import argparse
 from isaacgym import gymapi
 from isaacgym import gymutil
 import numpy as np
@@ -26,12 +24,124 @@ from isaacgym import gymtorch
 import json
 import torch
 
-# initialize gym
+# ==============================================================================
+# Asset Configuration - Add your assets here
+# ==============================================================================
+ASSET_EXAMPLES = [
+    {
+        "id": 0,
+        "name": "Round Door Handle",
+        "category": "RoundDoor",
+        "asset_name": "99660019962014",
+        "description": "Door with round rotating handle"
+    },
+    {
+        "id": 1,
+        "name": "Lever Door Handle",
+        "category": "LeverDoor",
+        "asset_name": "99650069960003",
+        "description": "Door with lever-style handle"
+    },
+    {
+        "id": 2,
+        "name": "Cabinet Door",
+        "category": "Cabinet",
+        "asset_name": "99613029962004",
+        "description": "Kitchen/office cabinet door"
+    },
+    {
+        "id": 3,
+        "name": "Refrigerator Door",
+        "category": "Fridge",
+        "asset_name": "99614019960005",
+        "description": "Refrigerator door"
+    },
+    {
+        "id": 4,
+        "name": "Safe Door",
+        "category": "Safe",
+        "asset_name": "99611129961204",
+        "description": "Safe box with combination lock"
+    },
+    {
+        "id": 5,
+        "name": "Car Door",
+        "category": "Car",
+        "asset_name": "99670019968001",
+        "description": "Vehicle door"
+    },
+    {
+        "id": 6,
+        "name": "Window",
+        "category": "Window",
+        "asset_name": "99690049969510",
+        "description": "Sliding or rotating window"
+    },
+]
+
+def print_available_examples():
+    """Print all available asset examples"""
+    print("\n" + "="*70)
+    print("Available Asset Examples:")
+    print("="*70)
+    for asset in ASSET_EXAMPLES:
+        print(f"  [{asset['id']}] {asset['name']:25s} - {asset['description']}")
+    print("="*70)
+    print(f"Usage: python door_asset_test.py --example_id <ID>")
+    print("="*70 + "\n")
+
+def get_asset_config(example_id):
+    """Get asset configuration by example ID"""
+    for asset in ASSET_EXAMPLES:
+        if asset['id'] == example_id:
+            return asset
+    return None
+
+# ==============================================================================
+# Main Script
+# ==============================================================================
+
+# Parse custom arguments
+custom_parser = argparse.ArgumentParser(description="UniDoorManip Asset Viewer")
+custom_parser.add_argument('--example_id', type=int, default=0,
+                          help='Asset example ID to visualize (use --list to see all)')
+custom_parser.add_argument('--list', action='store_true',
+                          help='List all available asset examples and exit')
+custom_args, remaining_args = custom_parser.parse_known_args()
+
+# Show list and exit if requested
+if custom_args.list:
+    print_available_examples()
+    exit(0)
+
+# Get asset configuration
+asset_config = get_asset_config(custom_args.example_id)
+if asset_config is None:
+    print(f"\nError: Invalid example_id '{custom_args.example_id}'")
+    print_available_examples()
+    exit(1)
+
+print("\n" + "="*70)
+print(f"Loading Asset Example #{asset_config['id']}: {asset_config['name']}")
+print(f"Category: {asset_config['category']}")
+print(f"Description: {asset_config['description']}")
+print("="*70 + "\n")
+
+# Initialize gym
 gym = gymapi.acquire_gym()
 
-# parse arguments
-args = gymutil.parse_arguments(description="Joint control Methods Example")
-# create a simulator
+# Parse IsaacGym arguments
+args = gymutil.parse_arguments(
+    description="UniDoorManip Asset Visualization",
+    custom_parameters=[{
+        "name": "--example_id",
+        "type": int,
+        "default": 0,
+        "help": "Asset example ID"
+    }]
+)
+
+# Create simulator
 sim_params = gymapi.SimParams()
 sim_params.substeps = 2
 sim_params.dt = 1.0 / 60.0
@@ -54,36 +164,42 @@ if sim is None:
     print("*** Failed to create sim")
     quit()
 
-# create viewer using the default camera properties
+# Create viewer
 viewer = gym.create_viewer(sim, gymapi.CameraProperties())
 if viewer is None:
     raise ValueError('*** Failed to create viewer')
 
-# add ground plane
+# Add ground plane
 plane_params = gymapi.PlaneParams()
-plane_params.normal = gymapi.Vec3(0, 0, 1) # z-up!
+plane_params.normal = gymapi.Vec3(0, 0, 1)  # z-up
 plane_params.distance = 0
 plane_params.static_friction = 12
 plane_params.dynamic_friction = 1
 plane_params.restitution = 0
-# create the ground plane
 gym.add_ground(sim, plane_params)
 
-# set up the env grid
+# Set up environment grid
 num_envs = 1
 spacing = 1.5
 env_lower = gymapi.Vec3(-spacing, 0.0, -spacing)
 env_upper = gymapi.Vec3(spacing, 0.0, spacing)
 
-# add cartpole urdf asset
-asset_root = "./generated_datasets/round_door_datasets"
-asset_file = "99665029962014/mobility.urdf"
+# Construct asset paths based on selected example
+asset_root = f"../generated_datasets/{asset_config['category']}"
+asset_file = f"{asset_config['asset_name']}/mobility.urdf"
+bounding_box_path = f"../generated_datasets/{asset_config['category']}/{asset_config['asset_name']}/bounding_box.json"
 
-# Load asset with default control type of position for all joints
+# Check if asset exists
+if not os.path.exists(os.path.join(asset_root, asset_file)):
+    print(f"\nError: Asset not found at {os.path.join(asset_root, asset_file)}")
+    print("Please make sure you have generated the datasets first.")
+    exit(1)
+
+# Load asset
 asset_options = gymapi.AssetOptions()
 asset_options.fix_base_link = True
 asset_options.disable_gravity = True
-asset_options.collapse_fixed_joints = True  # 合并由固定关节连接的刚体
+asset_options.collapse_fixed_joints = True
 asset_options.use_mesh_materials = True
 asset_options.mesh_normal_mode = gymapi.COMPUTE_PER_VERTEX
 asset_options.override_com = True
@@ -91,121 +207,78 @@ asset_options.override_inertia = True
 asset_options.vhacd_enabled = True
 asset_options.vhacd_params = gymapi.VhacdParams()
 asset_options.vhacd_params.resolution = 1024
-print("Loading asset '%s' from '%s'" % (asset_file, asset_root))
-cartpole_asset = gym.load_asset(sim, asset_root, asset_file, asset_options)
 
-# initial root pose for cartpole actors
-with open("../generated_datasets/round_door_datasets/99665029962014/bounding_box.json", "r") as f:
+print(f"Loading asset '{asset_file}' from '{asset_root}'")
+asset = gym.load_asset(sim, asset_root, asset_file, asset_options)
+
+if asset is None:
+    print(f"*** Failed to load asset")
+    exit(1)
+
+# Get asset bounding box for positioning
+with open(bounding_box_path, "r") as f:
     bounding_box = json.load(f)
     min_b = bounding_box["min"]
-# with open("./3dware_fridge/9961409/bounding_box.json", "r") as f:
-#     bounding_box = json.load(f)
-#     min_b = bounding_box["min"]
+
+# Set initial pose - position asset above ground
 initial_pose = gymapi.Transform()
 initial_pose.p = gymapi.Vec3(0.0, 0.0, -min_b[2] + 0.1)
-initial_pose.r = gymapi.Quat(0, 0, 1, 0)
+initial_pose.r = gymapi.Quat(0, 0, 1, 0)  # Rotate 180 degrees to face camera
 
-# Create environment 0
-# Cart held steady using position target mode.
-# Pole held at a 45 degree angle using position target mode.
-env0 = gym.create_env(sim, env_lower, env_upper, 2)
-door = gym.create_actor(env0, cartpole_asset, initial_pose, 'door', 0, 1)
-state_tensor = gym.get_actor_rigid_body_states(env0, door, gymapi.STATE_ALL)
-
-# state_tensor = gymtorch.wrap_tensor(state_tensor)
+# Create environment and actor
+env = gym.create_env(sim, env_lower, env_upper, 2)
+actor = gym.create_actor(env, asset, initial_pose, asset_config['name'], 0, 1)
 
 # Configure DOF properties
-props = gym.get_actor_dof_properties(env0, door)
-props["driveMode"] = (gymapi.DOF_MODE_POS, gymapi.DOF_MODE_POS)
-props["stiffness"] = (5000.0, 5000.0)
-props["damping"] = (100.0, 100.0)
-gym.set_actor_dof_properties(env0, door, props)
-dict = gym.get_actor_dof_dict(env0,door)
-print(dict)
-# Set DOF drive targets
-# surface = gym.find_actor_dof_handle(env0, door, 'joint_2')
-# surface_1 = gym.find_actor_dof_handle(env0, door, 'joint_1')
+props = gym.get_actor_dof_properties(env, actor)
+num_dofs = len(props)
 
-# gym.set_dof_target_position(env0, surface, 1)
-# gym.set_dof_target_position(env0, surface_1, 1)
+if num_dofs > 0:
+    # Set all DOFs to position control mode
+    props["driveMode"].fill(gymapi.DOF_MODE_POS)
+    props["stiffness"].fill(5000.0)
+    props["damping"].fill(100.0)
+    gym.set_actor_dof_properties(env, actor, props)
 
-def _draw_line(src, dst):
-    line_vec = np.stack([src, dst]).flatten().astype(np.float32)
-    color = np.array([1,0,0], dtype=np.float32)
-    gym.clear_lines(viewer)
-    gym.add_lines(
-        viewer,
-        env0,
-        1,
-        line_vec,
-        color
-    )
+    dof_dict = gym.get_actor_dof_dict(env, actor)
+    print(f"\nDegrees of Freedom: {dof_dict}")
+else:
+    print("\nNo articulated joints found in this asset")
 
-
-# Look at the first env
+# Set camera view
 cam_pos = gymapi.Vec3(3, 0, 2)
 cam_target = gymapi.Vec3(0, 0, 1)
 gym.viewer_camera_look_at(viewer, None, cam_pos, cam_target)
 
-# 构造goal_pos
-# with open("/home/Userlist/section/Datasets/safe_datasets/99611519961201/handle_bounding.json", "r") as f:
-#     bounding_box = json.load(f)
-#     # max_x = bounding_box["bounding_box"]['max_x']
-#     # min_x = bounding_box["bounding_box"]['min_x']
+print("\n" + "="*70)
+print("Visualization Controls:")
+print("  - Mouse: Rotate/Pan/Zoom camera")
+print("  - ESC: Exit")
+print("="*70 + "\n")
 
-#     # max_y = bounding_box["bounding_box"]['max_y']
-#     # min_y = bounding_box["bounding_box"]['min_y']
-
-#     # max_z = bounding_box["bounding_box"]['max_z']
-#     # min_z = bounding_box["bounding_box"]['min_z']
-
-#     x = bounding_box["goal_pos"][0]
-#     z = bounding_box["goal_pos"][1]
-def quat_apply(a, b):
-    shape = b.shape
-    a = a.reshape(-1, 4)
-    b = b.reshape(-1, 3)
-    xyz = a[:, :3]
-    t = xyz.cross(b, dim=-1) * 2
-    return (b + a[:, 3:] * t + xyz.cross(t, dim=-1)).view(shape)
-
-# local_handle_pos = np.zeros(3, dtype=np.float32)
-# local_handle_pos_s = np.zeros(3, dtype=np.float32)
-
-# local_handle_pos[0] = x
-# local_handle_pos[2] = z
-# local_handle_pos_s[0] = x
-# local_handle_pos_s[2] = z + 0.1
-
-# local_handle_pos = torch.tensor(local_handle_pos)
-# local_handle_pos_s = torch.tensor(local_handle_pos_s)
-# doorhandle_rot = state_tensor["pose"]['r'][2].tolist()
-# doorhandle_pos = state_tensor["pose"]['p'][2].tolist()
-# doorhandle_rot = torch.tensor(doorhandle_rot)
-# doorhandle_pos = torch.tensor(doorhandle_pos)
-# print(doorhandle_pos)
-# print(doorhandle_rot)
-
-# goal_pos = quat_apply(doorhandle_rot, local_handle_pos) + doorhandle_pos
-# src_pos =  quat_apply(doorhandle_rot, local_handle_pos_s) + doorhandle_pos
-# print(goal_pos)
-
-# _draw_line(src_pos,goal_pos)
-
-# Simulate
+# Simulation loop
+frame_count = 0
 while not gym.query_viewer_has_closed(viewer):
-
-    # step the physics
+    # Step physics
     gym.simulate(sim)
     gym.fetch_results(sim, True)
 
-    # update the viewer
+    # Optional: Animate joints (uncomment to enable)
+    # if num_dofs > 0 and frame_count % 60 == 0:
+    #     # Slowly open/close joints
+    #     angle = math.sin(frame_count * 0.01) * 0.5 + 0.5  # Range [0, 1]
+    #     for dof_name, dof_idx in dof_dict.items():
+    #         gym.set_dof_target_position(env, gym.find_actor_dof_handle(env, actor, dof_name), angle)
+
+    # Update graphics
     gym.step_graphics(sim)
     gym.draw_viewer(viewer, sim, True)
-
     gym.sync_frame_time(sim)
+
+    frame_count += 1
 
 print('Done')
 
+# Cleanup
 gym.destroy_viewer(viewer)
 gym.destroy_sim(sim)
