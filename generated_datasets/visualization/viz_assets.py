@@ -1,7 +1,7 @@
 """
-Visualize Random Assets from UniDoorManip Dataset
+Visualize Assets from UniDoorManip Dataset
 
-This script randomly selects 5 assets from each category and renders them using Isaac Gym.
+This script selects the first N assets (sorted by ID) from each category and renders them using Isaac Gym.
 The rendered images are saved to visualization/render_image/{category}_{asset_id}.jpg
 
 Categories:
@@ -15,7 +15,6 @@ Categories:
 """
 
 import os
-import random
 import argparse
 
 # isaacgym MUST be imported before torch
@@ -372,17 +371,14 @@ def visualize_asset(category_folder, asset_id, output_path, headless=True):
 
 
 def main(num_samples=5, seed=None, headless=True, categories=None):
-    """Main function to visualize random assets from each category.
+    """Main function to visualize assets from each category.
 
     Args:
-        num_samples: Number of random assets to visualize per category
-        seed: Random seed for reproducibility
+        num_samples: Number of assets to visualize per category (first N sorted by ID)
+        seed: Not used (kept for backwards compatibility)
         headless: If False, open Isaac Gym GUI for user interaction
         categories: List of category names to visualize. If None, visualize all categories.
     """
-    if seed is not None:
-        random.seed(seed)
-        np.random.seed(seed)
 
     # Create output directory
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -411,7 +407,7 @@ def main(num_samples=5, seed=None, headless=True, categories=None):
             print(f"Valid categories are: {', '.join(CATEGORIES.keys())}")
             return
 
-    print(f"Visualizing {num_samples} random assets from each category...")
+    print(f"Visualizing first {num_samples} assets (sorted by ID) from each category...")
     print(f"Dataset root: {DATASET_ROOT}")
     print(f"Output directory: {OUTPUT_DIR}")
     print(f"Mode: {'Interactive GUI' if not headless else 'Headless'}")
@@ -421,18 +417,18 @@ def main(num_samples=5, seed=None, headless=True, categories=None):
     for category_name, category_folder in categories_to_viz.items():
         print(f"Category: {category_name.upper()}")
 
-        # Get all available assets for this category
+        # Get all available assets for this category (already sorted)
         available_assets = get_available_assets(category_folder)
 
         if len(available_assets) == 0:
             print(f"  WARNING: No assets found for {category_name}, skipping...")
             continue
 
-        # Randomly sample assets
+        # Take first num_samples assets (already sorted by ID)
         num_to_sample = min(num_samples, len(available_assets))
-        sampled_assets = random.sample(available_assets, num_to_sample)
+        sampled_assets = available_assets[:num_to_sample]
 
-        print(f"  Found {len(available_assets)} assets, sampling {num_to_sample}")
+        print(f"  Found {len(available_assets)} assets, taking first {num_to_sample}")
 
         # Visualize each sampled asset
         for asset_id in sampled_assets:
@@ -453,11 +449,11 @@ def main(num_samples=5, seed=None, headless=True, categories=None):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Visualize random assets from UniDoorManip dataset")
+    parser = argparse.ArgumentParser(description="Visualize assets from UniDoorManip dataset")
     parser.add_argument('--num-samples', type=int, default=5,
-                        help='Number of random assets to visualize per category (default: 5)')
+                        help='Number of assets to visualize per category (takes first N sorted by ID, default: 5)')
     parser.add_argument('--seed', type=int, default=None,
-                        help='Random seed for reproducibility (default: None)')
+                        help='Not used (kept for backwards compatibility)')
     parser.add_argument('--no-headless', action='store_true',
                         help='Open Isaac Gym GUI for interactive visualization (default: headless mode)')
     parser.add_argument('--category', '--categories', nargs='+', type=str, default=None,
