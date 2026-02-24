@@ -1,0 +1,44 @@
+{
+  "asset_id": "99660059962019",
+  "body_id": "9966005",
+  "handle_id": "9962019",
+  "door_type": "RoundDoor",
+  "open_direction": "right-pull",
+  "coordinate_frame": "F_world: x=right, y=up, z=out-of-door",
+  "door_body": {
+    "mesh_scale": 0.7113522531511941,
+    "width_m": 1.084101,
+    "height_m": 1.734561,
+    "depth_m": 0.109687,
+    "bounding_box": {
+      "min": [-0.3626051319198649, -0.7568966186227031, -0.05493664227575443],
+      "max": [0.7214959851825362, 0.9776647892737935, 0.05475070028396083]
+    }
+  },
+  "hinge": {
+    "coordinate_frame": "F_world: origin=door_center, x=right, y=up, z=out-of-door",
+    "position": [-0.32473678126876204, 0.7608445362086281, -0.0],
+    "axis": [0.0, -1.0, -0.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4
+  },
+  "handle": {
+    "coordinate_frame": "position_on_door+rotation_axis: F_hinge (origin=hinge_joint, axes=F_world); bounding_box+grasp_point: F_handle (origin=handle_joint, axes=F_world)",
+    "type": "round",
+    "mesh_scale": 1.5242157059585568,
+    "position_on_door": [0.5704604924205108, -0.7177411489811916, -0.03652734304341412],
+    "rotation_axis": [0.0, 0.0, -1.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4,
+    "width_m": 0.066148,
+    "height_m": 0.066148,
+    "depth_m": 0.102474,
+    "bounding_box": {
+      "min": [-0.03305231768234624, -0.03307392819536476, 0.00019321904913407168],
+      "max": [0.03309554833851933, 0.03307392819536476, 0.10266687526108963]
+    },
+    "grasp_point": [2.1615327964409867e-05, 0.06667220527361208, -0.0]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "asset_id": "99613079962019",
+  "body_id": "9961307",
+  "handle_id": "9962019",
+  "door_type": "Cabinet",
+  "open_direction": "right-pull",
+  "coordinate_frame": "F_world: x=right, y=up, z=out-of-door",
+  "door_body": {
+    "mesh_scale": 0.7,
+    "width_m": 0.531053,
+    "height_m": 1.017851,
+    "depth_m": 0.753247,
+    "bounding_box": {
+      "min": [-0.4798749268054962, -0.4862003303831932, -0.7199535334369156],
+      "max": [0.05117796957492828, 0.5316508313872335, 0.03329335473072222]
+    }
+  },
+  "hinge": {
+    "coordinate_frame": "F_world: origin=door_center, x=right, y=up, z=out-of-door",
+    "position": [-0.4743428409099579, 0.31222322653683754, -0.0],
+    "axis": [0.0, -1.0, -0.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4
+  },
+  "handle": {
+    "coordinate_frame": "position_on_door+rotation_axis: F_hinge (origin=hinge_joint, axes=F_world); bounding_box+grasp_point: F_handle (origin=handle_joint, axes=F_world)",
+    "type": "round",
+    "mesh_scale": 1.525530381046416,
+    "position_on_door": [0.4743428409099579, -0.31222322653683754, -0.010946742194253194],
+    "rotation_axis": [0.0, 0.0, -1.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4,
+    "width_m": 0.066205,
+    "height_m": 0.066205,
+    "depth_m": 0.102562,
+    "bounding_box": {
+      "min": [-0.03308082615295386, -0.033102455305593394, 0.00019338570551308902],
+      "max": [0.033124094096675216, 0.033102455305593394, 0.10275542807072573]
+    },
+    "grasp_point": [2.163397173843714e-05, 0.06672971175841157, -0.0]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "asset_id": "99690109969503",
+  "body_id": "9969010",
+  "handle_id": "9969503",
+  "door_type": "Window",
+  "open_direction": "window",
+  "coordinate_frame": "F_world: x=right, y=up, z=out-of-door",
+  "door_body": {
+    "mesh_scale": 1.0,
+    "width_m": 0.65,
+    "height_m": 0.9,
+    "depth_m": 0.04,
+    "bounding_box": {
+      "min": [-0.3301365304589269, -0.44728168845176697, -0.022650929812809296],
+      "max": [0.3198634212180699, 0.4527183075380137, 0.01734911484359463]
+    }
+  },
+  "hinge": {
+    "coordinate_frame": "F_world: origin=door_center, x=right, y=up, z=out-of-door",
+    "position": [-0.3051365797779531, 0.42271840093149793, -0.0],
+    "axis": [0.0, -1.0, -0.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4
+  },
+  "handle": {
+    "coordinate_frame": "position_on_door+rotation_axis: F_hinge (origin=hinge_joint, axes=F_world); bounding_box+grasp_point: F_handle (origin=handle_joint, axes=F_world)",
+    "type": "window",
+    "mesh_scale": 1.0,
+    "position_on_door": [0.0, 0.0, -0.0],
+    "rotation_axis": [0.0, 0.0, -1.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4,
+    "width_m": 0.023569,
+    "height_m": 0.15,
+    "depth_m": 0.022455,
+    "bounding_box": {
+      "min": [-0.012918475732379612, -0.03698755459230701, 0.016701555176331102],
+      "max": [0.010650407222856493, 0.113012445407693, 0.039156646136931324]
+    },
+    "grasp_point": [-0.0011340342926303168, 0.03691113831781104, -0.04340166598132226]
+  },
+  "lock": {
+    "bounding_box": {
+      "min": [-0.0190980990550024, -0.0629751078924095, 0.000533885679875216],
+      "max": [0.01683004962876296, 0.06434973110810255, 0.016701550883497493]
+    }
+  }
+}

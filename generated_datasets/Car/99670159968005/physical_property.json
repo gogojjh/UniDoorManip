@@ -1,0 +1,44 @@
+{
+  "asset_id": "99670159968005",
+  "body_id": "9967015",
+  "handle_id": "9968005",
+  "door_type": "Car",
+  "open_direction": "car",
+  "coordinate_frame": "F_world: x=right, y=up, z=out-of-door",
+  "door_body": {
+    "mesh_scale": 1.0,
+    "width_m": 4.0,
+    "height_m": 1.956084,
+    "depth_m": 1.983506,
+    "bounding_box": {
+      "min": [-2.3403950631955266, -0.877309055171149, -1.936367144609143],
+      "max": [1.659604936804473, 1.078774683015007, 0.04713930335445762]
+    }
+  },
+  "hinge": {
+    "coordinate_frame": "F_world: origin=door_center, x=right, y=up, z=out-of-door",
+    "position": [-1.0737739406004048, 0.5477275064157311, -0.0],
+    "axis": [0.0, -1.0, -0.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4
+  },
+  "handle": {
+    "coordinate_frame": "position_on_door+rotation_axis: F_hinge (origin=hinge_joint, axes=F_world); bounding_box+grasp_point: F_handle (origin=handle_joint, axes=F_world)",
+    "type": "car",
+    "mesh_scale": 1.0,
+    "position_on_door": [1.0637739406004048, -0.5477275064157311, -0.005],
+    "rotation_axis": [0.0, 0.0, -1.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 0.0,
+    "upper_limit_deg": 0.0,
+    "width_m": 0.2,
+    "height_m": 0.032476,
+    "depth_m": 0.038903,
+    "bounding_box": {
+      "min": [-0.016779521042862153, -0.0157140007582058, 0.0030330828856546363],
+      "max": [0.18322047895713783, 0.016761683903953776, 0.04193651250328666]
+    },
+    "grasp_point": [0.08318834781965827, 0.022484798429426182, -0.0]
+  }
+}

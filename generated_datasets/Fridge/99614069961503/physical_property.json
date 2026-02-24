@@ -1,0 +1,44 @@
+{
+  "asset_id": "99614069961503",
+  "body_id": "9961406",
+  "handle_id": "9961503",
+  "door_type": "Fridge",
+  "open_direction": "fridge",
+  "coordinate_frame": "F_world: x=right, y=up, z=out-of-door",
+  "door_body": {
+    "mesh_scale": 0.7,
+    "width_m": 0.716923,
+    "height_m": 1.32049,
+    "depth_m": 0.693571,
+    "bounding_box": {
+      "min": [-0.6096377881674985, -0.8245894707004794, -0.6805387686815308],
+      "max": [0.10728511225869844, 0.4959003846583147, 0.013031938960555094]
+    }
+  },
+  "hinge": {
+    "coordinate_frame": "F_world: origin=door_center, x=right, y=up, z=out-of-door",
+    "position": [-0.5556167714566627, 0.32549146593092926, -0.0],
+    "axis": [0.0, -1.0, -0.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4
+  },
+  "handle": {
+    "coordinate_frame": "position_on_door+rotation_axis: F_hinge (origin=hinge_joint, axes=F_world); bounding_box+grasp_point: F_handle (origin=handle_joint, axes=F_world)",
+    "type": "dial",
+    "mesh_scale": 0.7,
+    "position_on_door": [0.5556167714566627, -0.32549146593092926, -0.0305585833754622],
+    "rotation_axis": [0.0, 0.0, -1.0],
+    "lower_limit_rad": 0.0,
+    "upper_limit_rad": 1.5079644737231006,
+    "upper_limit_deg": 86.4,
+    "width_m": 0.145014,
+    "height_m": 0.040112,
+    "depth_m": 0.054373,
+    "bounding_box": {
+      "min": [-0.11669279033914223, -0.02001007122082379, 0.00026756679222183653],
+      "max": [0.02832162311708304, 0.02010149502216185, 0.054640425497925374]
+    },
+    "grasp_point": [-0.04418558552861213, 0.04495399743318557, 0.000898505002260208]
+  }
+}
