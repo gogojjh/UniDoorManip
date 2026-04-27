@@ -5,10 +5,10 @@ and writes kinematics.json into the asset's own directory.
 
 Usage:
     # Single asset (category is case-insensitive)
-    python extract_door_kinematics.py --category leverdoor --asset_id 99650069960003
+    python extract_door_kinematics.py --category leverdoor_ccw_pull --asset_id 99650069960003
 
     # All assets in one category
-    python extract_door_kinematics.py --category LeverDoor
+    python extract_door_kinematics.py --category LeverDoor_ccw_pull
 
     # All assets across all categories
     python extract_door_kinematics.py --all
@@ -37,7 +37,24 @@ def _dump_json(obj: dict) -> str:
 
 
 DATASET_ROOT = Path(__file__).resolve().parent.parent
-CATEGORIES = ["LeverDoor", "RoundDoor", "Cabinet", "Fridge", "Safe", "Car", "Window"]
+CATEGORIES = [
+    "LeverDoor_ccw_pull",
+    "LeverDoor_ccw_push",
+    "LeverDoor_cw_pull",
+    "LeverDoor_cw_push",
+    "RoundDoor_ccw_pull",
+    "RoundDoor_ccw_push",
+    "RoundDoor_cw_pull",
+    "RoundDoor_cw_push",
+    "Cabinet_ccw_pull",
+    "Cabinet_cw_pull",
+    "Fridge_ccw_pull",
+    "Fridge_cw_pull",
+    "Safe",
+    "Car",
+    "Window_ccw_pull",
+    "Window_cw_pull",
+]
 CATEGORY_MAP = {cat.lower(): cat for cat in CATEGORIES}
 
 HANDLE_TYPE_MAP = {
@@ -273,6 +290,7 @@ def extract_kinematics(asset_id: str, category: str) -> dict:
             "axis": hinge["axis"],
             "lower_limit_rad": hinge["lower_rad"],
             "upper_limit_rad": hinge["upper_rad"],
+            "lower_limit_deg": round(math.degrees(hinge["lower_rad"]), 2),
             "upper_limit_deg": round(math.degrees(hinge["upper_rad"]), 2),
         },
 

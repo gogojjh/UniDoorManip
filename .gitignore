@@ -1,5 +1,6 @@
 Datasets
-__pycache__
+__pycache__/
+*.pyc
 Simulation/env/utils/__pycache__/*
 Simulation/env/__pycache__/
 assets/
@@ -7,3 +8,30 @@ generated_datasets/
 logs/
 robot_arm_models/
 Simulation/env/utils/__pycache__/*.pyc
+
+# Project directories to ignore
+.claude/
+CLAUDE.md
+Pointnet2_PyTorch/
+changelog/
+doc/prompt_create_dataset_20260312.md
+generated_datasets_20260313/
+openspec/
+pytorch3d/
+test/
+
+# Common files
+.DS_Store
+.env
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+*.out
+*.tmp
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

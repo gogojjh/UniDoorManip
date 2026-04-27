@@ -80,13 +80,13 @@ class FrankaSliderFridge(BaseEnv):
         doorhandle_pos = self.door_handle_rigid_body_tensor[:, :3].clone()
         doorhandle_rot = self.door_handle_rigid_body_tensor[:, 3:7].clone()
         # rotate 偏移（Y轴偏移）
-        if self.task in ["leverdoor", "rounddoor"]:
+        if self.task in ["leverdoor_ccw_pull", "rounddoor_ccw_pull"]:
             down_q = torch.stack(self.num_envs * [torch.tensor([0, 1, 0, 0])]).to(self.device).view((self.num_envs, 4))
         # down_q = torch.stack(self.num_envs * [torch.tensor([0.7071068, 0.7071068, 0, 0])]).to(self.device).view((self.num_envs, 4))
         if not self.modelTest:
             random_num = np.clip(np.random.normal(loc=0.0, scale=0.5, size=(self.num_envs,)), -1, 1)
             random_num = torch.tensor(random_num, device=self.device)
-            if self.task == "leverdoor":
+            if self.task == "leverdoor_ccw_pull":
                 range = self.handle_door_max_tensor[:, 0] - self.handle_door_min_tensor[:, 0]
                 scale = range/5
                 y_b = scale * random_num
@@ -109,14 +109,14 @@ class FrankaSliderFridge(BaseEnv):
         if self.gapartnet_baseline:
             random_num = np.clip(np.random.normal(loc=0.0, scale=0.5, size=(self.num_envs,)), -1, 1)
             random_num = torch.tensor(random_num, device=self.device)
-            if self.task == "leverdoor":
+            if self.task == "leverdoor_ccw_pull":
                 range_x = self.handle_door_max_tensor[:, 0] - self.handle_door_min_tensor[:, 0]
                 range_z = self.handle_door_max_tensor[:, 1] - self.handle_door_min_tensor[:, 1]
                 range_y = self.handle_door_max_tensor[:, 2] - self.handle_door_min_tensor[:, 2]
                 self.goal_pos_offset_tensor[:, 2] = range_z - 0.01
                 self.goal_pos_offset_tensor[:, 0] = -range_x/2
                 self.goal_pos_offset_tensor[:, 1] = 0
-            elif self.task == "rounddoor":
+            elif self.task == "rounddoor_ccw_pull":
                 range_x = self.handle_door_max_tensor[:, 0] - self.handle_door_min_tensor[:, 0]
                 range_z = self.handle_door_max_tensor[:, 1] - self.handle_door_min_tensor[:, 1]
                 range_y = self.handle_door_max_tensor[:, 2] - self.handle_door_min_tensor[:, 2]
@@ -181,7 +181,7 @@ class FrankaSliderFridge(BaseEnv):
         
         door_dof_props = self.gym.get_asset_dof_properties(self.door_asset_list[door_type])
 
-        if self.task == "leverdoor":
+        if self.task == "leverdoor_ccw_pull":
             
             #set door props
             # random_phy = (0.2 * np.random.rand() + 0.8)
@@ -202,7 +202,7 @@ class FrankaSliderFridge(BaseEnv):
             door_dof_props["driveMode"][:] = gymapi.DOF_MODE_EFFORT
             # door_dof_props['upper'][0] = 0.0
             # door_dof_props['lower'][0] = -1.5707963267948966
-        elif self.task == "rounddoor":
+        elif self.task == "rounddoor_ccw_pull":
             # set door props
             # random_phy = (0.2 * np.random.rand() + 0.8)
             # door_dof_props['stiffness'][0] = 30.0 * random_phy

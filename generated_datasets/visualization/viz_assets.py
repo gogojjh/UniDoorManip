@@ -8,8 +8,14 @@ Categories:
     - Cabinet
     - Car
     - Fridge
-    - LeverDoor
-    - RoundDoor
+    - LeverDoor_ccw_pull
+    - LeverDoor_ccw_push
+    - LeverDoor_cw_pull
+    - LeverDoor_cw_push
+    - RoundDoor_ccw_pull
+    - RoundDoor_ccw_push
+    - RoundDoor_cw_pull
+    - RoundDoor_cw_push
     - Safe
     - Window
 """
@@ -29,13 +35,22 @@ DATASET_ROOT = os.path.join(os.path.dirname(__file__), '..')
 
 # Categories to visualize (using capitalized folder names)
 CATEGORIES = {
-    'Cabinet': 'Cabinet',
+    'Cabinet_ccw_pull': 'Cabinet_ccw_pull',
+    'Cabinet_cw_pull': 'Cabinet_cw_pull',
     'Car': 'Car',
-    'Fridge': 'Fridge',
-    'LeverDoor': 'LeverDoor',
-    'RoundDoor': 'RoundDoor',
+    'Fridge_ccw_pull': 'Fridge_ccw_pull',
+    'Fridge_cw_pull': 'Fridge_cw_pull',
+    'LeverDoor_ccw_pull': 'LeverDoor_ccw_pull',
+    'LeverDoor_ccw_push': 'LeverDoor_ccw_push',
+    'LeverDoor_cw_pull': 'LeverDoor_cw_pull',
+    'LeverDoor_cw_push': 'LeverDoor_cw_push',
+    'RoundDoor_ccw_pull': 'RoundDoor_ccw_pull',
+    'RoundDoor_ccw_push': 'RoundDoor_ccw_push',
+    'RoundDoor_cw_pull': 'RoundDoor_cw_pull',
+    'RoundDoor_cw_push': 'RoundDoor_cw_push',
     'Safe': 'Safe',
-    'Window': 'Window'
+    'Window_ccw_pull': 'Window_ccw_pull',
+    'Window_cw_pull': 'Window_cw_pull',
 }
 
 # Output directory
@@ -458,7 +473,11 @@ if __name__ == "__main__":
                         help='Open Isaac Gym GUI for interactive visualization (default: headless mode)')
     parser.add_argument('--category', '--categories', nargs='+', type=str, default=None,
                         help='List of categories to visualize (space-separated). '
-                             'Valid: Cabinet Car Fridge LeverDoor RoundDoor Safe Window. '
+                             'Valid: Cabinet_ccw_pull Cabinet_cw_pull Car '
+                             'Fridge_ccw_pull Fridge_cw_pull '
+                             'LeverDoor_ccw_pull LeverDoor_ccw_push LeverDoor_cw_pull LeverDoor_cw_push '
+                             'RoundDoor_ccw_pull RoundDoor_ccw_push RoundDoor_cw_pull RoundDoor_cw_push '
+                             'Safe Window_ccw_pull Window_cw_pull. '
                              'If not specified, all categories will be visualized. '
                              'Example: --category Cabinet Car LeverDoor')
 

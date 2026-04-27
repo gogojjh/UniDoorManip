@@ -18,8 +18,8 @@ Drawn elements:
   - Darkmagenta arrow: secondary close direction
 
 Usage:
-    python viz_kinematics.py --category leverdoor --asset_id 99650089960001
-    python viz_kinematics.py --category LeverDoor --output_dir ./viz_output
+    python viz_kinematics.py --category leverdoor_ccw_pull --asset_id 99650089960001
+    python viz_kinematics.py --category LeverDoor_ccw_pull --output_dir ./viz_output
     python viz_kinematics.py --all --output_dir ./viz_output
 """
 
@@ -33,7 +33,24 @@ import numpy as np
 from matplotlib.lines import Line2D
 
 DATASET_ROOT = Path(__file__).resolve().parent.parent
-CATEGORIES = ["LeverDoor", "RoundDoor", "Cabinet", "Fridge", "Safe", "Car", "Window"]
+CATEGORIES = [
+    "LeverDoor_ccw_pull",
+    "LeverDoor_ccw_push",
+    "LeverDoor_cw_pull",
+    "LeverDoor_cw_push",
+    "RoundDoor_ccw_pull",
+    "RoundDoor_ccw_push",
+    "RoundDoor_cw_pull",
+    "RoundDoor_cw_push",
+    "Cabinet_ccw_pull",
+    "Cabinet_cw_pull",
+    "Fridge_ccw_pull",
+    "Fridge_cw_pull",
+    "Safe",
+    "Car",
+    "Window_ccw_pull",
+    "Window_cw_pull",
+]
 CATEGORY_MAP = {cat.lower(): cat for cat in CATEGORIES}
 
 _AXIS_COLORS = ["red", "green", "blue"]

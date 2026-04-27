@@ -7,6 +7,7 @@ echo "=========================================="
 echo "UniDoorManip Installation Script"
 echo "=========================================="
 
+
 apt update && apt install -y git vim locate wget tar curl
 apt-get install -y libvulkan1 vulkan-tools
 vulkaninfo | grep "GPU"

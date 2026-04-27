@@ -19,11 +19,10 @@ class OpenLeverDoorManipulation(BaseManipulation) :
     center:grasp pos
     axis:
     '''
-    def plan_pathway_gt_multi_dt(self, pose, eval=False) :
+    def plan_pathway_gt_multi_dt(self, pose, eval=False):
         print("stage two lever right pull")
     
         # move to the handle
-        
         self.env.reset()
         for i in range(50):
             self.env.step(pose)
