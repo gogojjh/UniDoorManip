@@ -46,8 +46,9 @@ CATEGORIES = [
     "Cabinet_cw_pull",
     "Fridge_ccw_pull",
     "Fridge_cw_pull",
-    "Safe",
-    "Car",
+    "Safe_ccw_pull",
+    "Safe_cw_pull",
+    "Car_pull",
     "Window_ccw_pull",
     "Window_cw_pull",
 ]

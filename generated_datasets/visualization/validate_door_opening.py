@@ -34,11 +34,11 @@ OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'render_image')
 
 VALID_CATEGORIES = [
     'Cabinet_ccw_pull', 'Cabinet_cw_pull',
-    'Car',
+    'Car_pull',
     'Fridge_ccw_pull', 'Fridge_cw_pull',
     'LeverDoor_ccw_pull', 'LeverDoor_ccw_push', 'LeverDoor_cw_pull', 'LeverDoor_cw_push',
     'RoundDoor_ccw_pull', 'RoundDoor_ccw_push', 'RoundDoor_cw_pull', 'RoundDoor_cw_push',
-    'Safe',
+    'Safe_ccw_pull', 'Safe_cw_pull',
     'Window_ccw_pull', 'Window_cw_pull',
 ]
 

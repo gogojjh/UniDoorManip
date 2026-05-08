@@ -18,11 +18,12 @@ This directory contains procedurally generated articulated object assets for doo
 | Cabinet_cw_pull       | 14          | Cabinet: handle clockwise + pull door                |
 | Fridge_ccw_pull       | 11          | Fridge: handle counterclockwise + pull door          |
 | Fridge_cw_pull        | 11          | Fridge: handle clockwise + pull door                 |
-| Safe                  | 20          | Safe boxes with combination locks                    |
-| Car                   | 10          | Vehicle doors                                        |
+| Safe_ccw_pull         | 19          | Safe: dial handle counterclockwise + pull door       |
+| Safe_cw_pull          | 19          | Safe: dial handle clockwise + pull door              |
+| Car_pull              | 10          | Vehicle doors (fixed handle) + pull                  |
 | Window_ccw_pull       | 35          | Window: handle counterclockwise + pull               |
 | Window_cw_pull        | 35          | Window: handle clockwise + pull                      |
-| **Total**             | **346**     | -                                                    |
+| **Total**             | **365**     | -                                                    |
 
 ### Naming Convention
 
@@ -37,7 +38,7 @@ generated_datasets/
 ├── README.md                    # This file
 ├── Cabinet_ccw_pull/           # Cabinet: handle counterclockwise + pull
 ├── Cabinet_cw_pull/            # Cabinet: handle clockwise + pull
-├── Car/                         # Car door assets
+├── Car_pull/                    # Car door assets (fixed handle) + pull
 ├── Fridge_ccw_pull/            # Fridge: handle counterclockwise + pull
 ├── Fridge_cw_pull/             # Fridge: handle clockwise + pull
 ├── LeverDoor_ccw_pull/         # Lever: counterclockwise + pull
@@ -48,7 +49,8 @@ generated_datasets/
 ├── RoundDoor_ccw_push/          # Round: counterclockwise + push
 ├── RoundDoor_cw_pull/           # Round: clockwise + pull
 ├── RoundDoor_cw_push/           # Round: clockwise + push
-├── Safe/                        # Safe door assets
+├── Safe_ccw_pull/               # Safe: dial handle counterclockwise + pull
+├── Safe_cw_pull/                # Safe: dial handle clockwise + pull
 ├── Window_ccw_pull/            # Window: handle counterclockwise + pull
 └── Window_cw_pull/             # Window: handle clockwise + pull
 ```
