@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.6.4 commit date:2023-09-25, commit time:13:24, hash:21bfc5e7fe3f</authoring_tool>
+    </contributor>
+    <created>2023-10-03T14:12:44</created>
+    <modified>2023-10-03T14:12:44</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Color_C08_001-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.4 0.2 0 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Stained_Mahogany_005-effect">
+      <profile_COMMON>
+        <newparam sid="Stained_Mahogany_jpg_005-surface">
+          <surface type="2D">
+            <init_from>Stained_Mahogany_jpg_005</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Stained_Mahogany_jpg_005-sampler">
+          <sampler2D>
+            <source>Stained_Mahogany_jpg_005-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Stained_Mahogany_jpg_005-sampler" texcoord="ID17"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="edge_color102510255_001-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0 0 0 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Stained_Mahogany_jpg_005" name="Stained_Mahogany_jpg_005">
+      <init_from>Stained_Mahogany.jpg.005.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Color_C08_001-material" name="Color_C08.001">
+      <instance_effect url="#Color_C08_001-effect"/>
+    </material>
+    <material id="Stained_Mahogany_005-material" name="Stained_Mahogany.005">
+      <instance_effect url="#Stained_Mahogany_005-effect"/>
+    </material>
+    <material id="edge_color102510255_001-material" name="edge_color102510255.001">
+      <instance_effect url="#edge_color102510255_001-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ID5_007-mesh" name="ID5.007">
+      <mesh>
+        <source id="ID5_007-mesh-positions">
+          <float_array id="ID5_007-mesh-positions-array" count="336">0.25 0 83 0 36 83 0 0 83 0.25 36 83 0.25 36 83 0.25 0 83 0 36 83 0 0 83 0.25 0 83 0.25 36 83 0 36 83 0 0 83 0.25 36 0 0.25 33 80 0.25 33 0 0.25 3 0 0.25 0 83 0.25 0 0 0.25 3 80 0.25 36 83 0.25 36 0 0.25 33 80 0.25 36 83 0.25 3 80 0.25 0 83 0.25 3 0 0.25 0 0 0.25 33 0 0.25 3 80 0.25 3 0 0.25 33 80 0.25 33 0 0.25 36 0 0.25 0 0 0 36 83 0.25 36 0 0 36 0 0.25 36 83 0.25 36 83 0 36 83 0.25 36 0 0 36 0 0 36 0 0 3 0 0 0 0 0 3 80 0 0 83 0 36 83 0 33 80 0 33 0 0 36 0 0 36 0 0 36 83 0 33 0 0 33 80 0 3 80 0 0 83 0 0 0 0 3 0 0 3 80 0 3 0 0 0 0 0 33 0 0 33 80 0.25 0 83 0 0 0 0.25 0 0 0 0 83 0 0 83 0.25 0 83 0 0 0 0.25 0 0 0 3 80 0.25 3 0 0 3 0 0.25 3 80 0.25 3 80 0 3 80 0.25 3 0 0 3 0 0.25 33 80 0 3 80 0 33 80 0.25 3 80 0.25 3 80 0.25 33 80 0 3 80 0 33 80 0.25 33 80 0 33 0 0.25 33 0 0 33 80 0 33 80 0.25 33 80 0 33 0 0.25 33 0 0.25 36 0 0 33 0 0 36 0 0.25 33 0 0.25 33 0 0.25 36 0 0 33 0 0 36 0 0.25 3 0 0 0 0 0 3 0 0.25 0 0 0.25 0 0 0.25 3 0 0 0 0 0 3 0</float_array>
+          <technique_common>
+            <accessor source="#ID5_007-mesh-positions-array" count="112" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID5_007-mesh-normals">
+          <float_array id="ID5_007-mesh-normals-array" count="30">0 0 1 1 0 0 0 1 0 -1 0 0 0 -1 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID5_007-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID5_007-mesh-map-0">
+          <float_array id="ID5_007-mesh-map-0-array" count="336">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.00320512 0.4615385 0.00320512 0 0 0.4615385 0 0 0 0.4615385 0.00320512 0 0.4615385 0 0.4230769 1.025641 0.4615385 1.064103 0.4230769 1.025641 0.0384615 1.025641 0.4615385 1.064103 0.4615385 1.064103 0.0384615 1.025641 0 1.064103 0.0384615 1.025641 0.0384615 0 0 1.064103 0 0 0 1.064103 0.0384615 0 0.4230769 0 0.4230769 1.025641 0.4615385 0 -0.00320512 1.064103 0 1.064103 -0.00320512 0 0 0 -0.00320512 0 0 1.064103 -0.4615385 0 -0.4615385 1.064103 -0.4230769 0 -0.4230769 0 -0.4615385 1.064103 -0.4230769 1.025641 -0.4230769 1.025641 -0.4615385 1.064103 -0.0384615 1.025641 -0.4615385 1.064103 0 1.064103 -0.0384615 1.025641 0 0 -0.0384615 1.025641 0 1.064103 -0.0384615 1.025641 0 0 -0.0384615 0 0 1.064103 0.00320512 1.064103 0 0 0.00320512 0 0 0 0.00320512 1.064103 -0.00320512 1.025641 0 1.025641 -0.00320512 0 0 0 -0.00320512 0 0 1.025641 -0.00320512 0.0384615 -0.00320512 0.4230769 0 0.0384615 0 0.4230769 0 0.0384615 -0.00320512 0.4230769 0 1.025641 0.00320512 1.025641 0 0 0.00320512 0 0 0 0.00320512 1.025641 -0.00320512 0.4230769 -0.00320512 0.4615385 0 0.4230769 0 0.4615385 0 0.4230769 -0.00320512 0.4615385 -0.00320512 0 -0.00320512 0.0384615 0 0 0 0.0384615 0 0 -0.00320512 0.0384615</float_array>
+          <technique_common>
+            <accessor source="#ID5_007-mesh-map-0-array" count="168" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID5_007-mesh-vertices">
+          <input semantic="POSITION" source="#ID5_007-mesh-positions"/>
+        </vertices>
+        <lines count="24">
+          <input semantic="VERTEX" source="#ID5_007-mesh-vertices" offset="0"/>
+          <p>9 8 10 9 10 11 11 8 29 28 28 30 30 31 31 32 32 9 8 33 33 29 42 32 42 10 60 59 61 60 11 61 62 42 63 62 59 63 61 33 60 29 59 28 63 30 62 31</p>
+        </lines>
+        <triangles material="Color_C08_001-material" count="28">
+          <input semantic="VERTEX" source="#ID5_007-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID5_007-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID5_007-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 12 1 6 13 1 7 14 1 8 15 1 9 16 1 10 17 1 11 16 1 12 15 1 13 18 1 14 16 1 15 18 1 16 19 1 17 19 1 18 18 1 19 13 1 20 19 1 21 13 1 22 12 1 23 34 2 24 35 2 25 36 2 26 35 2 27 34 2 28 37 2 29 43 3 30 44 3 31 45 3 32 46 3 33 45 3 34 44 3 35 45 3 36 46 3 37 47 3 38 45 3 39 47 3 40 48 3 41 48 3 42 47 3 43 49 3 44 49 3 45 47 3 46 50 3 47 64 4 48 65 4 49 66 4 50 65 4 51 64 4 52 67 4 53 72 2 54 73 2 55 74 2 56 73 2 57 72 2 58 75 2 59 80 5 60 81 5 61 82 5 62 81 5 63 80 5 64 83 5 65 88 4 66 89 4 67 90 4 68 89 4 69 88 4 70 91 4 71 96 6 72 97 6 73 98 6 74 97 6 75 96 6 76 99 6 77 104 7 78 105 7 79 106 7 80 105 7 81 104 7 82 107 7 83</p>
+        </triangles>
+        <triangles material="Stained_Mahogany_005-material" count="28">
+          <input semantic="VERTEX" source="#ID5_007-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID5_007-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID5_007-mesh-map-0" offset="2" set="0"/>
+          <p>4 5 84 5 5 85 6 5 86 7 5 87 6 5 88 5 5 89 20 3 90 21 3 91 22 3 92 21 3 93 23 3 94 22 3 95 22 3 96 23 3 97 24 3 98 23 3 99 25 3 100 24 3 101 26 3 102 24 3 103 25 3 104 27 3 105 21 3 106 20 3 107 38 4 108 39 4 109 40 4 110 41 4 111 40 4 112 39 4 113 51 1 114 52 1 115 53 1 116 53 1 117 52 1 118 54 1 119 54 1 120 52 1 121 55 1 122 52 1 123 56 1 124 55 1 125 57 1 126 55 1 127 56 1 128 55 1 129 57 1 130 58 1 131 68 2 132 69 2 133 70 2 134 71 2 135 70 2 136 69 2 137 76 4 138 77 4 139 78 4 140 79 4 141 78 4 142 77 4 143 84 0 144 85 0 145 86 0 146 87 0 147 86 0 148 85 0 149 92 2 150 93 2 151 94 2 152 95 2 153 94 2 154 93 2 155 100 8 156 101 8 157 102 8 158 103 8 159 102 8 160 101 8 161 108 9 162 109 9 163 110 9 164 111 9 165 110 9 166 109 9 167</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID26_002-mesh" name="ID26.002">
+      <mesh>
+        <source id="ID26_002-mesh-positions">
+          <float_array id="ID26_002-mesh-positions-array" count="336">0.25 33 80 0 33 0 0.25 33 0 0 33 80 0 33 80 0.25 33 80 0 33 0 0.25 33 0 0.25 33 0 0.25 33 80 0 33 80 0 33 0 0.25 36 0 0.25 33 80 0.25 33 0 0.25 3 0 0.25 0 83 0.25 0 0 0.25 3 80 0.25 36 83 0.25 36 0 0.25 33 80 0.25 36 83 0.25 3 80 0.25 0 83 0.25 3 0 0.25 0 0 0.25 33 0 0.25 3 80 0.25 3 0 0.25 36 0 0.25 36 83 0.25 0 83 0.25 0 0 0.25 33 80 0 3 80 0 33 80 0.25 3 80 0.25 3 80 0.25 33 80 0 3 80 0 33 80 0 3 80 0 3 0 0 0 0 0 3 80 0 0 83 0 36 83 0 33 80 0 33 0 0 36 0 0 36 0 0 36 83 0 33 0 0 33 80 0 3 80 0 0 83 0 0 0 0 3 0 0 3 0 0 0 0 0 0 83 0 36 83 0 36 0 0.25 36 0 0 33 0 0 36 0 0.25 33 0 0.25 33 0 0.25 36 0 0 33 0 0 36 0 0 3 80 0.25 3 0 0 3 0 0.25 3 80 0.25 3 80 0 3 80 0.25 3 0 0 3 0 0 36 83 0.25 36 0 0 36 0 0.25 36 83 0.25 36 83 0 36 83 0.25 36 0 0 36 0 0.25 0 83 0 36 83 0 0 83 0.25 36 83 0.25 36 83 0.25 0 83 0 36 83 0 0 83 0.25 0 83 0 0 0 0.25 0 0 0 0 83 0 0 83 0.25 0 83 0 0 0 0.25 0 0 0.25 3 0 0 0 0 0 3 0 0.25 0 0 0.25 0 0 0.25 3 0 0 0 0 0 3 0</float_array>
+          <technique_common>
+            <accessor source="#ID26_002-mesh-positions-array" count="112" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID26_002-mesh-normals">
+          <float_array id="ID26_002-mesh-normals-array" count="30">0 -1 0 1 0 0 0 0 -1 -1 0 0 0 0 -1 0 1 0 0 0 1 0 0 -1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID26_002-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID26_002-mesh-map-0">
+          <float_array id="ID26_002-mesh-map-0-array" count="336">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.025641 0.00320512 1.025641 0 0 0.00320512 0 0 0 0.00320512 1.025641 0.4615385 0 0.4230769 1.025641 0.4615385 1.064103 0.4230769 1.025641 0.0384615 1.025641 0.4615385 1.064103 0.4615385 1.064103 0.0384615 1.025641 0 1.064103 0.0384615 1.025641 0.0384615 0 0 1.064103 0 0 0 1.064103 0.0384615 0 0.4230769 0 0.4230769 1.025641 0.4615385 0 -0.00320512 0.0384615 -0.00320512 0.4230769 0 0.0384615 0 0.4230769 0 0.0384615 -0.00320512 0.4230769 -0.4615385 0 -0.4615385 1.064103 -0.4230769 0 -0.4230769 0 -0.4615385 1.064103 -0.4230769 1.025641 -0.4230769 1.025641 -0.4615385 1.064103 -0.0384615 1.025641 -0.4615385 1.064103 0 1.064103 -0.0384615 1.025641 0 0 -0.0384615 1.025641 0 1.064103 -0.0384615 1.025641 0 0 -0.0384615 0 -0.00320512 0.4230769 -0.00320512 0.4615385 0 0.4230769 0 0.4615385 0 0.4230769 -0.00320512 0.4615385 -0.00320512 1.025641 0 1.025641 -0.00320512 0 0 0 -0.00320512 0 0 1.025641 -0.00320512 1.064103 0 1.064103 -0.00320512 0 0 0 -0.00320512 0 0 1.064103 0.00320512 0.4615385 0.00320512 0 0 0.4615385 0 0 0 0.4615385 0.00320512 0 0 1.064103 0.00320512 1.064103 0 0 0.00320512 0 0 0 0.00320512 1.064103 -0.00320512 0 -0.00320512 0.0384615 0 0 0 0.0384615 0 0 -0.00320512 0.0384615</float_array>
+          <technique_common>
+            <accessor source="#ID26_002-mesh-map-0-array" count="168" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID26_002-mesh-vertices">
+          <input semantic="POSITION" source="#ID26_002-mesh-positions"/>
+        </vertices>
+        <lines count="24">
+          <input semantic="VERTEX" source="#ID26_002-mesh-vertices" offset="0"/>
+          <p>9 8 10 9 10 11 11 8 29 28 28 9 8 30 30 31 31 32 32 33 33 29 42 28 42 10 59 42 60 59 61 60 62 61 63 62 11 63 63 30 59 29 62 31 61 32 60 33</p>
+        </lines>
+        <triangles material="Color_C08_001-material" count="28">
+          <input semantic="VERTEX" source="#ID26_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID26_002-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID26_002-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 12 1 6 13 1 7 14 1 8 15 1 9 16 1 10 17 1 11 16 1 12 15 1 13 18 1 14 16 1 15 18 1 16 19 1 17 19 1 18 18 1 19 13 1 20 19 1 21 13 1 22 12 1 23 34 2 24 35 2 25 36 2 26 35 2 27 34 2 28 37 2 29 43 3 30 44 3 31 45 3 32 46 3 33 45 3 34 44 3 35 45 3 36 46 3 37 47 3 38 45 3 39 47 3 40 48 3 41 48 3 42 47 3 43 49 3 44 49 3 45 47 3 46 50 3 47 64 4 48 65 4 49 66 4 50 65 4 51 64 4 52 67 4 53 72 5 54 73 5 55 74 5 56 73 5 57 72 5 58 75 5 59 80 5 60 81 5 61 82 5 62 81 5 63 80 5 64 83 5 65 88 6 66 89 6 67 90 6 68 89 6 69 88 6 70 91 6 71 96 0 72 97 0 73 98 0 74 97 0 75 96 0 76 99 0 77 104 7 78 105 7 79 106 7 80 105 7 81 104 7 82 107 7 83</p>
+        </triangles>
+        <triangles material="Stained_Mahogany_005-material" count="28">
+          <input semantic="VERTEX" source="#ID26_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID26_002-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID26_002-mesh-map-0" offset="2" set="0"/>
+          <p>4 5 84 5 5 85 6 5 86 7 5 87 6 5 88 5 5 89 20 3 90 21 3 91 22 3 92 21 3 93 23 3 94 22 3 95 22 3 96 23 3 97 24 3 98 23 3 99 25 3 100 24 3 101 26 3 102 24 3 103 25 3 104 27 3 105 21 3 106 20 3 107 38 6 108 39 6 109 40 6 110 41 6 111 40 6 112 39 6 113 51 1 114 52 1 115 53 1 116 53 1 117 52 1 118 54 1 119 54 1 120 52 1 121 55 1 122 52 1 123 56 1 124 55 1 125 57 1 126 55 1 127 56 1 128 55 1 129 57 1 130 58 1 131 68 8 132 69 8 133 70 8 134 71 8 135 70 8 136 69 8 137 76 0 138 77 0 139 78 0 140 79 0 141 78 0 142 77 0 143 84 0 144 85 0 145 86 0 146 87 0 147 86 0 148 85 0 149 92 2 150 93 2 151 94 2 152 95 2 153 94 2 154 93 2 155 100 5 156 101 5 157 102 5 158 103 5 159 102 5 160 101 5 161 108 9 162 109 9 163 110 9 164 111 9 165 110 9 166 109 9 167</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="SketchUp_049" name="SketchUp.049" type="NODE">
+        <matrix sid="transform">-1.11027e-9 -0.0254 0 0.4334352 0.0254 -1.11027e-9 0 -0.08991475 0 0 0.0254 -1.040892 0 0 0 1</matrix>
+        <node id="instance_0_037" name="instance_0.037" type="NODE">
+          <matrix sid="transform">7.54979e-8 1 0 2.689559 -1 7.54979e-8 0 33 0 0 1 -3.8147e-6 0 0 0 1</matrix>
+        </node>
+        <node id="group_2_019" name="group_2.019" type="NODE">
+          <matrix sid="transform">1 -3.55271e-15 0 4.189559 3.55271e-15 1 0 -1.90735e-6 0 0 1 -3.8147e-6 0 0 0 1</matrix>
+          <node id="group_3_016" name="group_3.016" type="NODE">
+            <matrix sid="transform">1 -3.55271e-15 0 -5.96046e-8 3.55271e-15 1 0 -0.941124 0 0 1 -3.8147e-6 0 0 0 1</matrix>
+            <instance_geometry url="#ID26_002-mesh" name="group_3.016">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Color_C08_001-material" target="#Color_C08_001-material">
+                    <bind_vertex_input semantic="ID31" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="Stained_Mahogany_005-material" target="#Stained_Mahogany_005-material">
+                    <bind_vertex_input semantic="ID31" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="edge_color102510255_001-material" target="#edge_color102510255_001-material">
+                    <bind_vertex_input semantic="ID31" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="group_0_040" name="group_0.040" type="NODE">
+          <matrix sid="transform">1 -3.55271e-15 0 2.689559 3.55271e-15 1 0 -1.90735e-6 0 0 1 -3.8147e-6 0 0 0 1</matrix>
+          <node id="group_1_028" name="group_1.028" type="NODE">
+            <matrix sid="transform">1 -3.55271e-15 0 -5.96046e-8 3.55271e-15 1 0 -0.941124 0 0 1 -3.8147e-6 0 0 0 1</matrix>
+            <instance_geometry url="#ID5_007-mesh" name="group_1.028">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Color_C08_001-material" target="#Color_C08_001-material">
+                    <bind_vertex_input semantic="ID17" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="Stained_Mahogany_005-material" target="#Stained_Mahogany_005-material">
+                    <bind_vertex_input semantic="ID17" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="edge_color102510255_001-material" target="#edge_color102510255_001-material">
+                    <bind_vertex_input semantic="ID17" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

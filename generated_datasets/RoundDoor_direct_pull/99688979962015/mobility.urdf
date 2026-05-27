@@ -1,0 +1,83 @@
+<robot name="right-pull-door">
+	<link name="base" />
+	<link name="link_0">
+		<visual name="out-frame">
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="texture_dae/frame.dae" scale="1.028005267791202 1.028005267791202 1.028005267791202" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="texture_dae/frame.dae" scale="1.028005267791202 1.028005267791202 1.028005267791202" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_0" type="fixed">
+		<origin rpy="1.570796326794897 0 -1.570796326794897" xyz="0 0 0" />
+		<child link="link_0" />
+		<parent link="base" />
+	</joint>
+	<link name="link_1">
+		<visual name="surf-board">
+			<origin xyz="0.3408803688229586 -0.8418508504863397 0" />
+			<geometry>
+				<mesh filename="texture_dae/board.dae" scale="1.028005267791202 1.028005267791202 1.028005267791202" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0.3408803688229586 -0.8418508504863397 0" />
+			<geometry>
+				<mesh filename="texture_dae/board.dae" scale="1.028005267791202 1.028005267791202 1.028005267791202" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_1" type="revolute">
+		<origin xyz="-0.3408803688229586 0.8418508504863397 0" />
+		<axis xyz="0 -1 0" />
+		<child link="link_1" />
+		<parent link="link_0" />
+		<limit lower="0" upper="1.5079644737231006" />
+	</joint>
+	<link name="link_2">
+		<visual name="handle">
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="texture_dae/9962015-handle-right.dae" scale="1.177413922420962 1.177413922420962 1.177413922420962" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="texture_dae/9962015-handle-right.dae" scale="1.177413922420962 1.177413922420962 1.177413922420962" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_2" type="revolute">
+		<origin xyz="0 0 0" />
+		<child link="link_2" />
+		<parent link="link_3" />
+		<axis xyz="0 0 1" />
+		<limit lower="0" upper="0" />
+	</joint>
+	<link name="link_3">
+		<visual name="lock">
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="texture_dae/9962015-lock-right.dae" scale="1.177413922420962 1.177413922420962 1.177413922420962" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="texture_dae/9962015-lock-right.dae" scale="1.177413922420962 1.177413922420962 1.177413922420962" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_3" type="fixed">
+		<origin xyz="0.6122546263919675 -0.9519902776401536 0.0304158294888412" />
+		<child link="link_3" />
+		<parent link="link_1" />
+	</joint>
+</robot>

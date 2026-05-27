@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.6.4 commit date:2023-09-25, commit time:13:24, hash:21bfc5e7fe3f</authoring_tool>
+    </contributor>
+    <created>2023-11-12T14:33:37</created>
+    <modified>2023-11-12T14:33:37</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="material_0_141-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.6431373 0.6980392 0.7333333 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_000_Wandschrank_Holz_002-effect">
+      <profile_COMMON>
+        <newparam sid="_000_Wandschrank_Holz_jpg_002-surface">
+          <surface type="2D">
+            <init_from>_000_Wandschrank_Holz_jpg_002</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="_000_Wandschrank_Holz_jpg_002-sampler">
+          <sampler2D>
+            <source>_000_Wandschrank_Holz_jpg_002-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="_000_Wandschrank_Holz_jpg_002-sampler" texcoord="ID72"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="edge_color000255_247-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0 0 0 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="_000_Wandschrank_Holz_jpg_002" name="_000_Wandschrank_Holz_jpg_002">
+      <init_from>_000_Wandschrank_Holz.jpg.002.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="material_0_141-material" name="material_0.141">
+      <instance_effect url="#material_0_141-effect"/>
+    </material>
+    <material id="_000_Wandschrank_Holz_002-material" name="_000_Wandschrank_Holz.002">
+      <instance_effect url="#_000_Wandschrank_Holz_002-effect"/>
+    </material>
+    <material id="edge_color000255_247-material" name="edge_color000255.247">
+      <instance_effect url="#edge_color000255_247-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ID67_012-mesh" name="ID67.012">
+      <mesh>
+        <source id="ID67_012-mesh-positions">
+          <float_array id="ID67_012-mesh-positions-array" count="36">19.37008 0.3149606 0.7874016 0.3149606 19.37008 0.7874016 0.3149606 0.3149606 0.7874016 19.37008 19.37008 0.7874016 19.37008 19.37008 0.7874016 19.37008 0.3149606 0.7874016 0.3149606 19.37008 0.7874016 0.3149606 0.3149606 0.7874016 19.37008 19.37008 0.7874016 0.3149606 19.37008 0.7874016 0.3149606 0.3149606 0.7874016 19.37008 0.3149606 0.7874016</float_array>
+          <technique_common>
+            <accessor source="#ID67_012-mesh-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID67_012-mesh-normals">
+          <float_array id="ID67_012-mesh-normals-array" count="6">0 0 1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#ID67_012-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID67_012-mesh-map-0">
+          <float_array id="ID67_012-mesh-map-0-array" count="24">-0.1991732 -0.3950558 -0.111068 -0.3024557 -0.1958806 -0.3044358 -0.111068 -0.3024557 -0.1991732 -0.3950558 -0.1143607 -0.3930757 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID67_012-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID67_012-mesh-vertices">
+          <input semantic="POSITION" source="#ID67_012-mesh-positions"/>
+        </vertices>
+        <lines count="4">
+          <input semantic="VERTEX" source="#ID67_012-mesh-vertices" offset="0"/>
+          <p>9 8 10 9 11 10 8 11</p>
+        </lines>
+        <triangles material="material_0_141-material" count="2">
+          <input semantic="VERTEX" source="#ID67_012-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID67_012-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID67_012-mesh-map-0" offset="2" set="0"/>
+          <p>4 1 6 5 1 7 6 1 8 7 1 9 6 1 10 5 1 11</p>
+        </triangles>
+        <triangles material="_000_Wandschrank_Holz_002-material" count="2">
+          <input semantic="VERTEX" source="#ID67_012-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID67_012-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID67_012-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="SketchUp_853" name="SketchUp.853" type="NODE">
+        <matrix sid="transform">0.0254 0 0 -1.04933 0 0.0254 0 0 0 0 0.0254 0 0 0 0 1</matrix>
+        <node id="group_3_235" name="group_3.235" type="NODE">
+          <matrix sid="transform">1 0 0 31.49606 0 7.54979e-8 -1 9.842521 0 1 7.54979e-8 3.55271e-15 0 0 0 1</matrix>
+          <node id="group_5_183" name="group_5.183" type="NODE">
+            <matrix sid="transform">1 0 0 -8.097874 0 1 0 -9.831388 0 0 1 9.047137 0 0 0 1</matrix>
+            <instance_geometry url="#ID67_012-mesh" name="group_5.183">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="material_0_141-material" target="#material_0_141-material">
+                    <bind_vertex_input semantic="ID72" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="_000_Wandschrank_Holz_002-material" target="#_000_Wandschrank_Holz_002-material">
+                    <bind_vertex_input semantic="ID72" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="edge_color000255_247-material" target="#edge_color000255_247-material">
+                    <bind_vertex_input semantic="ID72" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

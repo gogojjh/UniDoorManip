@@ -5,6 +5,7 @@ Simulation/env/utils/__pycache__/*
 Simulation/env/__pycache__/
 assets/
 generated_datasets/
+!generated_datasets/*direct*/
 logs/
 robot_arm_models/
 Simulation/env/utils/__pycache__/*.pyc
@@ -35,3 +36,4 @@ build/
 *.swp
 *.swo
 *~
+generated_datasets/visualization/viz_asset_axess/*

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.6.4 commit date:2023-09-25, commit time:13:24, hash:21bfc5e7fe3f</authoring_tool>
+    </contributor>
+    <created>2023-11-07T21:40:44</created>
+    <modified>2023-11-07T21:40:44</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="material_0_0_6115-effect">
+      <profile_COMMON>
+        <newparam sid="texture_2_jpg_017-surface">
+          <surface type="2D">
+            <init_from>texture_2_jpg_017</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="texture_2_jpg_017-sampler">
+          <sampler2D>
+            <source>texture_2_jpg_017-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="texture_2_jpg_017-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_1_0_1754-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 1 1 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_0_0_6116-effect">
+      <profile_COMMON>
+        <newparam sid="texture_1_jpg_051-surface">
+          <surface type="2D">
+            <init_from>texture_1_jpg_051</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="texture_1_jpg_051-sampler">
+          <sampler2D>
+            <source>texture_1_jpg_051-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="texture_1_jpg_051-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_1_0_1755-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 1 1 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_0_0_6114-effect">
+      <profile_COMMON>
+        <newparam sid="texture_1_jpg_051-surface">
+          <surface type="2D">
+            <init_from>texture_1_jpg_051</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="texture_1_jpg_051-sampler">
+          <sampler2D>
+            <source>texture_1_jpg_051-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="texture_1_jpg_051-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_1_0_1753-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 1 1 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_0_0_6113-effect">
+      <profile_COMMON>
+        <newparam sid="texture_2_jpg_017-surface">
+          <surface type="2D">
+            <init_from>texture_2_jpg_017</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="texture_2_jpg_017-sampler">
+          <sampler2D>
+            <source>texture_2_jpg_017-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="texture_2_jpg_017-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_1_0_1752-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 1 1 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_0_0_6117-effect">
+      <profile_COMMON>
+        <newparam sid="texture_1_jpg_051-surface">
+          <surface type="2D">
+            <init_from>texture_1_jpg_051</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="texture_1_jpg_051-sampler">
+          <sampler2D>
+            <source>texture_1_jpg_051-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="texture_1_jpg_051-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_1_0_1756-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 1 1 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_0_0_6118-effect">
+      <profile_COMMON>
+        <newparam sid="texture_1_jpg_051-surface">
+          <surface type="2D">
+            <init_from>texture_1_jpg_051</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="texture_1_jpg_051-sampler">
+          <sampler2D>
+            <source>texture_1_jpg_051-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="texture_1_jpg_051-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_1_0_1757-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 1 1 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="texture_1_jpg_051" name="texture_1_jpg_051">
+      <init_from>texture_1.jpg.051.jpg</init_from>
+    </image>
+    <image id="texture_2_jpg_017" name="texture_2_jpg_017">
+      <init_from>texture_2.jpg.017.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="material_0_0_6115-material" name="material_0_0.6115">
+      <instance_effect url="#material_0_0_6115-effect"/>
+    </material>
+    <material id="material_1_0_1754-material" name="material_1_0.1754">
+      <instance_effect url="#material_1_0_1754-effect"/>
+    </material>
+    <material id="material_0_0_6116-material" name="material_0_0.6116">
+      <instance_effect url="#material_0_0_6116-effect"/>
+    </material>
+    <material id="material_1_0_1755-material" name="material_1_0.1755">
+      <instance_effect url="#material_1_0_1755-effect"/>
+    </material>
+    <material id="material_0_0_6114-material" name="material_0_0.6114">
+      <instance_effect url="#material_0_0_6114-effect"/>
+    </material>
+    <material id="material_1_0_1753-material" name="material_1_0.1753">
+      <instance_effect url="#material_1_0_1753-effect"/>
+    </material>
+    <material id="material_0_0_6113-material" name="material_0_0.6113">
+      <instance_effect url="#material_0_0_6113-effect"/>
+    </material>
+    <material id="material_1_0_1752-material" name="material_1_0.1752">
+      <instance_effect url="#material_1_0_1752-effect"/>
+    </material>
+    <material id="material_0_0_6117-material" name="material_0_0.6117">
+      <instance_effect url="#material_0_0_6117-effect"/>
+    </material>
+    <material id="material_1_0_1756-material" name="material_1_0.1756">
+      <instance_effect url="#material_1_0_1756-effect"/>
+    </material>
+    <material id="material_0_0_6118-material" name="material_0_0.6118">
+      <instance_effect url="#material_0_0_6118-effect"/>
+    </material>
+    <material id="material_1_0_1757-material" name="material_1_0.1757">
+      <instance_effect url="#material_1_0_1757-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh" name="LB_21_B1/LB_21_B/mesh15/mesh15-geometry#mesh15-geometry.001">
+      <mesh>
+        <source id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-positions">
+          <float_array id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-positions-array" count="24">0.3058591 0.04110527 -0.01711243 -0.3996089 0.04110527 0.01906555 0.3058591 0.04110527 0.01906555 -0.3996089 0.04110527 -0.01711243 0.3058591 -0.1036056 0.01906555 -0.3996089 -0.1036056 -0.01711243 -0.3996089 -0.1036056 0.01906555 0.3058591 -0.1036056 -0.01711243</float_array>
+          <technique_common>
+            <accessor source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-normals">
+          <float_array id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-normals-array" count="12">0 1 0 0 0 1 0 0 -1 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-normals-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-map-0">
+          <float_array id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-map-0-array" count="96">0.74589 0.463831 0.531047 0.448206 0.74589 0.448206 0.531047 0.448206 0.74589 0.463831 0.531047 0.463831 -0.507081 0.463831 -0.721925 0.526331 -0.721925 0.463831 0.74589 0.463831 0.531047 0.526331 0.531047 0.463831 -0.721925 0.526331 -0.507081 0.463831 -0.507081 0.526331 0.531047 0.526331 0.74589 0.463831 0.74589 0.526331 0.531047 0.526331 0.74589 0.541956 0.531047 0.541956 0.74589 0.541956 0.531047 0.526331 0.74589 0.526331 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-map-0-array" count="48" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-vertices">
+          <input semantic="POSITION" source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-positions"/>
+        </vertices>
+        <triangles material="material_0_0_6115-material" count="8">
+          <input semantic="VERTEX" source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 1 1 6 4 1 7 2 1 8 0 2 9 5 2 10 3 2 11 4 1 12 1 1 13 6 1 14 5 2 15 0 2 16 7 2 17 5 3 18 4 3 19 6 3 20 4 3 21 5 3 22 7 3 23</p>
+        </triangles>
+        <triangles material="material_1_0_1754-material" count="8">
+          <input semantic="VERTEX" source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh-map-0" offset="2" set="0"/>
+          <p>2 3 24 1 3 25 0 3 26 3 3 27 0 3 28 1 3 29 2 2 30 4 2 31 1 2 32 3 1 33 5 1 34 0 1 35 6 2 36 1 2 37 4 2 38 7 1 39 0 1 40 5 1 41 6 0 42 4 0 43 5 0 44 7 0 45 5 0 46 4 0 47</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh" name="LB_21_L1/LB_21_L/mesh16/mesh16-geometry#mesh16-geometry.001">
+      <mesh>
+        <source id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-positions">
+          <float_array id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-positions-array" count="24">0.07235598 0.557742 0.01808899 -0.07235598 -0.557742 0.01808899 0.07235598 -0.557742 0.01808899 -0.07235598 0.557742 0.01808899 0.07235598 -0.557742 -0.01808899 -0.07235598 0.557742 -0.01808899 -0.07235598 -0.557742 -0.01808899 0.07235598 0.557742 -0.01808899</float_array>
+          <technique_common>
+            <accessor source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-normals">
+          <float_array id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-normals-array" count="18">0 0 1 0 -1 0 1 0 0 0 1 0 -1 0 0 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-map-0">
+          <float_array id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-map-0-array" count="144">-0.713098 -0.223669 -0.775598 -0.715857 -0.713098 -0.715857 -0.775598 -0.715857 -0.713098 -0.223669 -0.775598 -0.223669 -0.634973 -0.731482 -0.697473 -0.715857 -0.697473 -0.731482 -0.697473 -0.715857 -0.713098 -0.223669 -0.713098 -0.715857 0.340655 -0.715857 0.278155 -0.700232 0.278155 -0.715857 -0.634973 -0.223669 -0.619348 -0.715857 -0.619348 -0.223669 -0.697473 -0.715857 -0.634973 -0.731482 -0.634973 -0.715857 -0.713098 -0.223669 -0.697473 -0.715857 -0.697473 -0.223669 0.278155 -0.700232 0.340655 -0.715857 0.340655 -0.700232 -0.619348 -0.715857 -0.634973 -0.223669 -0.634973 -0.715857 -0.634973 -0.223669 -0.697473 -0.715857 -0.634973 -0.715857 -0.697473 -0.715857 -0.634973 -0.223669 -0.697473 -0.223669 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-map-0-array" count="72" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-vertices">
+          <input semantic="POSITION" source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-positions"/>
+        </vertices>
+        <triangles material="material_0_0_6116-material" count="12">
+          <input semantic="VERTEX" source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 1 1 6 4 1 7 2 1 8 4 2 9 0 2 10 2 2 11 0 3 12 5 3 13 3 3 14 5 4 15 1 4 16 3 4 17 4 1 18 1 1 19 6 1 20 0 2 21 4 2 22 7 2 23 5 3 24 0 3 25 7 3 26 1 4 27 5 4 28 6 4 29 5 5 30 4 5 31 6 5 32 4 5 33 5 5 34 7 5 35</p>
+        </triangles>
+        <triangles material="material_1_0_1755-material" count="12">
+          <input semantic="VERTEX" source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh-map-0" offset="2" set="0"/>
+          <p>2 5 36 1 5 37 0 5 38 3 5 39 0 5 40 1 5 41 2 3 42 4 3 43 1 3 44 2 4 45 0 4 46 4 4 47 3 1 48 5 1 49 0 1 50 3 2 51 1 2 52 5 2 53 6 3 54 1 3 55 4 3 56 7 4 57 4 4 58 0 4 59 7 1 60 0 1 61 5 1 62 6 2 63 5 2 64 1 2 65 6 0 66 4 0 67 5 0 68 7 0 69 5 0 70 4 0 71</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh" name="LB_21_R1/LB_21_R/mesh14/mesh14-geometry#mesh14-geometry.001">
+      <mesh>
+        <source id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-positions">
+          <float_array id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-positions-array" count="24">0.002042651 0.495242 0.01808899 -0.1426683 -0.620242 0.01808899 0.002042651 -0.620242 0.01808899 -0.1426683 0.495242 0.01808899 0.002042651 -0.620242 -0.01808899 -0.1426683 0.495242 -0.01808899 -0.1426683 -0.620242 -0.01808899 0.002042651 0.495242 -0.01808899</float_array>
+          <technique_common>
+            <accessor source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-normals">
+          <float_array id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-normals-array" count="18">0 0 1 0 -1 0 1 0 0 0 1 0 -1 0 0 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-map-0">
+          <float_array id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-map-0-array" count="144">-0.974817 -1.208044 -0.912317 -0.715857 -0.974817 -0.715857 -0.912317 -0.715857 -0.974817 -1.208044 -0.912317 -1.208044 -0.912317 -0.715857 -0.974817 -0.700232 -0.974817 -0.715857 1.110186 -0.700232 0.617999 -0.715857 1.110186 -0.715857 0.617999 -0.715857 0.555499 -0.700232 0.555499 -0.715857 0.555499 -0.700232 0.06331098 -0.715857 0.555499 -0.715857 -0.974817 -0.700232 -0.912317 -0.715857 -0.912317 -0.700232 0.617999 -0.715857 1.110186 -0.700232 0.617999 -0.700232 0.555499 -0.700232 0.617999 -0.715857 0.617999 -0.700232 0.06331098 -0.715857 0.555499 -0.700232 0.06331098 -0.700232 0.555499 -0.700232 0.617999 -0.208044 0.555499 -0.208044 0.617999 -0.208044 0.555499 -0.700232 0.617999 -0.700232 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-map-0-array" count="72" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-vertices">
+          <input semantic="POSITION" source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-positions"/>
+        </vertices>
+        <triangles material="material_0_0_6114-material" count="12">
+          <input semantic="VERTEX" source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 1 1 6 4 1 7 2 1 8 4 2 9 0 2 10 2 2 11 0 3 12 5 3 13 3 3 14 5 4 15 1 4 16 3 4 17 4 1 18 1 1 19 6 1 20 0 2 21 4 2 22 7 2 23 5 3 24 0 3 25 7 3 26 1 4 27 5 4 28 6 4 29 5 5 30 4 5 31 6 5 32 4 5 33 5 5 34 7 5 35</p>
+        </triangles>
+        <triangles material="material_1_0_1753-material" count="12">
+          <input semantic="VERTEX" source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh-map-0" offset="2" set="0"/>
+          <p>2 5 36 1 5 37 0 5 38 3 5 39 0 5 40 1 5 41 2 3 42 4 3 43 1 3 44 2 4 45 0 4 46 4 4 47 3 1 48 5 1 49 0 1 50 3 2 51 1 2 52 5 2 53 6 3 54 1 3 55 4 3 56 7 4 57 4 4 58 0 4 59 7 1 60 0 1 61 5 1 62 6 2 63 5 2 64 1 2 65 6 0 66 4 0 67 5 0 68 7 0 69 5 0 70 4 0 71</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh" name="LB_21_T1/LB_21_T/mesh13/mesh13-geometry#mesh13-geometry.001">
+      <mesh>
+        <source id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-positions">
+          <float_array id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-positions-array" count="24">0.227734 0.05152243 -0.02329736 -0.4777339 0.05152243 0.01288062 0.227734 0.05152243 0.01288062 -0.4777339 0.05152243 -0.02329736 0.227734 -0.09318959 0.01288062 -0.4777339 -0.09318959 -0.02329736 -0.4777339 -0.09318959 0.01288062 0.227734 -0.09318959 -0.02329736</float_array>
+          <technique_common>
+            <accessor source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-normals">
+          <float_array id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-normals-array" count="12">0 1 0 0 0 1 0 0 -1 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-normals-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-map-0">
+          <float_array id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-map-0-array" count="96">-0.721925 0.510706 -0.507081 0.526331 -0.721925 0.526331 -0.507081 0.526331 -0.721925 0.510706 -0.507081 0.510706 -0.507081 0.03414297 -0.721925 0.09664297 -0.721925 0.03414297 -0.721925 0.510706 -0.507081 0.448206 -0.507081 0.510706 -0.721925 0.09664297 -0.507081 0.03414297 -0.507081 0.09664297 -0.507081 0.448206 -0.721925 0.510706 -0.721925 0.448206 -0.507081 0.448206 -0.721925 0.432581 -0.507081 0.432581 -0.721925 0.432581 -0.507081 0.448206 -0.721925 0.448206 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-map-0-array" count="48" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-vertices">
+          <input semantic="POSITION" source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-positions"/>
+        </vertices>
+        <triangles material="material_0_0_6113-material" count="8">
+          <input semantic="VERTEX" source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 1 1 6 4 1 7 2 1 8 0 2 9 5 2 10 3 2 11 4 1 12 1 1 13 6 1 14 5 2 15 0 2 16 7 2 17 5 3 18 4 3 19 6 3 20 4 3 21 5 3 22 7 3 23</p>
+        </triangles>
+        <triangles material="material_1_0_1752-material" count="8">
+          <input semantic="VERTEX" source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh-map-0" offset="2" set="0"/>
+          <p>2 3 24 1 3 25 0 3 26 3 3 27 0 3 28 1 3 29 2 2 30 4 2 31 1 2 32 3 1 33 5 1 34 0 1 35 6 2 36 1 2 37 4 2 38 7 1 39 0 1 40 5 1 41 6 0 42 4 0 43 5 0 44 7 0 45 5 0 46 4 0 47</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="mesh17_mesh17-geometry_mesh17-geometry_005-mesh" name="mesh17/mesh17-geometry#mesh17-geometry.005">
+      <mesh>
+        <source id="mesh17_mesh17-geometry_mesh17-geometry_005-mesh-positions">
+          <float_array id="mesh17_mesh17-geometry_mesh17-geometry_005-mesh-positions-array" count="12">-0.352734 0.4130305 0 0.352734 -0.4130305 0 -0.352734 -0.4130305 0 0.352734 0.4130305 0</float_array>
+          <technique_common>
+            <accessor source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh17_mesh17-geometry_mesh17-geometry_005-mesh-normals">
+          <float_array id="mesh17_mesh17-geometry_mesh17-geometry_005-mesh-normals-array" count="6">0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh17_mesh17-geometry_mesh17-geometry_005-mesh-map-0">
+          <float_array id="mesh17_mesh17-geometry_mesh17-geometry_005-mesh-map-0-array" count="24">-0.697473 -0.286169 -0.912317 -0.653357 -0.697473 -0.653357 -0.912317 -0.653357 -0.697473 -0.286169 -0.912317 -0.286169 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="mesh17_mesh17-geometry_mesh17-geometry_005-mesh-vertices">
+          <input semantic="POSITION" source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-positions"/>
+        </vertices>
+        <triangles material="material_0_0_6117-material" count="2">
+          <input semantic="VERTEX" source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5</p>
+        </triangles>
+        <triangles material="material_1_0_1756-material" count="2">
+          <input semantic="VERTEX" source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh-map-0" offset="2" set="0"/>
+          <p>2 1 6 1 1 7 0 1 8 3 1 9 0 1 10 1 1 11</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="mesh18_mesh18-geometry_mesh18-geometry_003-mesh" name="mesh18/mesh18-geometry#mesh18-geometry.003">
+      <mesh>
+        <source id="mesh18_mesh18-geometry_mesh18-geometry_003-mesh-positions">
+          <float_array id="mesh18_mesh18-geometry_mesh18-geometry_003-mesh-positions-array" count="12">0.352734 0.4130305 0 -0.352734 -0.4130305 0 0.352734 -0.4130305 0 -0.352734 0.4130305 0</float_array>
+          <technique_common>
+            <accessor source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh18_mesh18-geometry_mesh18-geometry_003-mesh-normals">
+          <float_array id="mesh18_mesh18-geometry_mesh18-geometry_003-mesh-normals-array" count="6">0 0 1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh18_mesh18-geometry_mesh18-geometry_003-mesh-map-0">
+          <float_array id="mesh18_mesh18-geometry_mesh18-geometry_003-mesh-map-0-array" count="24">0.555499 -0.286169 0.340655 -0.653357 0.555499 -0.653357 0.340655 -0.653357 0.555499 -0.286169 0.340655 -0.286169 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="mesh18_mesh18-geometry_mesh18-geometry_003-mesh-vertices">
+          <input semantic="POSITION" source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-positions"/>
+        </vertices>
+        <triangles material="material_0_0_6118-material" count="2">
+          <input semantic="VERTEX" source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5</p>
+        </triangles>
+        <triangles material="material_1_0_1757-material" count="2">
+          <input semantic="VERTEX" source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh-map-0" offset="2" set="0"/>
+          <p>2 1 6 1 1 7 0 1 8 3 1 9 0 1 10 1 1 11</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001" name="LB_21_B1/LB_21_B/mesh15/mesh15-geometry#mesh15-geometry.001" type="NODE">
+        <matrix sid="transform">1 0 0 -0.3843683 0 7.54979e-8 -1 0.001117135 0 1 7.54979e-8 -0.5113651 0 0 0 1</matrix>
+        <instance_geometry url="#LB_21_B1_LB_21_B_mesh15_mesh15-geometry_mesh15-geometry_001-mesh" name="LB_21_B1/LB_21_B/mesh15/mesh15-geometry#mesh15-geometry.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material_0_0_6115-material" target="#material_0_0_6115-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="material_1_0_1754-material" target="#material_1_0_1754-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001" name="LB_21_L1/LB_21_L/mesh16/mesh16-geometry#mesh16-geometry.001" type="NODE">
+        <matrix sid="transform">1 0 0 -0.8563332 0 7.54979e-8 -1 1.40632e-4 0 1 7.54979e-8 -0.05722876 0 0 0 1</matrix>
+        <instance_geometry url="#LB_21_L1_LB_21_L_mesh16_mesh16-geometry_mesh16-geometry_001-mesh" name="LB_21_L1/LB_21_L/mesh16/mesh16-geometry#mesh16-geometry.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material_0_0_6116-material" target="#material_0_0_6116-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="material_1_0_1755-material" target="#material_1_0_1755-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001" name="LB_21_R1/LB_21_R/mesh14/mesh14-geometry#mesh14-geometry.001" type="NODE">
+        <matrix sid="transform">1 0 0 0.06415915 0 7.54979e-8 -1 1.40632e-4 0 1 7.54979e-8 0.005271241 0 0 0 1</matrix>
+        <instance_geometry url="#LB_21_R1_LB_21_R_mesh14_mesh14-geometry_mesh14-geometry_001-mesh" name="LB_21_R1/LB_21_R/mesh14/mesh14-geometry#mesh14-geometry.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material_0_0_6114-material" target="#material_0_0_6114-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="material_1_0_1753-material" target="#material_1_0_1753-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001" name="LB_21_T1/LB_21_T/mesh13/mesh13-geometry#mesh13-geometry.001" type="NODE">
+        <matrix sid="transform">1 0 0 -0.3062433 0 7.54979e-8 -1 -0.005067711 0 1 7.54979e-8 0.4489908 0 0 0 1</matrix>
+        <instance_geometry url="#LB_21_T1_LB_21_T_mesh13_mesh13-geometry_mesh13-geometry_001-mesh" name="LB_21_T1/LB_21_T/mesh13/mesh13-geometry#mesh13-geometry.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material_0_0_6113-material" target="#material_0_0_6113-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="material_1_0_1752-material" target="#material_1_0_1752-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="mesh17_mesh17-geometry_mesh17-geometry_005" name="mesh17/mesh17-geometry#mesh17-geometry.005" type="NODE">
+        <matrix sid="transform">1 0 0 -0.4312432 0 7.54979e-8 -1 0.01822963 0 1 7.54979e-8 -0.05722927 0 0 0 1</matrix>
+        <instance_geometry url="#mesh17_mesh17-geometry_mesh17-geometry_005-mesh" name="mesh17/mesh17-geometry#mesh17-geometry.005">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material_0_0_6117-material" target="#material_0_0_6117-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="material_1_0_1756-material" target="#material_1_0_1756-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="mesh18_mesh18-geometry_mesh18-geometry_003" name="mesh18/mesh18-geometry#mesh18-geometry.003" type="NODE">
+        <matrix sid="transform">1 0 0 -0.4312432 0 7.54979e-8 -1 -0.005888348 0 1 7.54979e-8 -0.05722927 0 0 0 1</matrix>
+        <instance_geometry url="#mesh18_mesh18-geometry_mesh18-geometry_003-mesh" name="mesh18/mesh18-geometry#mesh18-geometry.003">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material_0_0_6118-material" target="#material_0_0_6118-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="material_1_0_1757-material" target="#material_1_0_1757-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

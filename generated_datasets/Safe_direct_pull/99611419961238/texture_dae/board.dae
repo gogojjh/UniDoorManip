@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.6.4 commit date:2023-09-25, commit time:13:24, hash:21bfc5e7fe3f</authoring_tool>
+    </contributor>
+    <created>2023-10-20T15:09:19</created>
+    <modified>2023-10-20T15:09:19</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="material_223-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.6705882 0.6901961 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="material_0_139-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 1 1 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="edge_color000255_245-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0 0 0 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Metal_Aluminum_Anodized_016-effect">
+      <profile_COMMON>
+        <newparam sid="Metal_Aluminum_Anodized_jpg_012-surface">
+          <surface type="2D">
+            <init_from>Metal_Aluminum_Anodized_jpg_012</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Metal_Aluminum_Anodized_jpg_012-sampler">
+          <sampler2D>
+            <source>Metal_Aluminum_Anodized_jpg_012-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Metal_Aluminum_Anodized_jpg_012-sampler" texcoord="ID564"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Metal_Aluminum_Anodized_jpg_012" name="Metal_Aluminum_Anodized_jpg_012">
+      <init_from>Metal_Aluminum_Anodized.jpg.012.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="material_223-material" name="material.223">
+      <instance_effect url="#material_223-effect"/>
+    </material>
+    <material id="material_0_139-material" name="material_0.139">
+      <instance_effect url="#material_0_139-effect"/>
+    </material>
+    <material id="edge_color000255_245-material" name="edge_color000255.245">
+      <instance_effect url="#edge_color000255_245-effect"/>
+    </material>
+    <material id="Metal_Aluminum_Anodized_016-material" name="Metal_Aluminum_Anodized.016">
+      <instance_effect url="#Metal_Aluminum_Anodized_016-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ID546_003-mesh" name="ID546.003">
+      <mesh>
+        <source id="ID546_003-mesh-positions">
+          <float_array id="ID546_003-mesh-positions-array" count="120">-0.03320312 -12.06249 6.468747 0.02929687 -12.06249 -6.968751 -0.03320312 -12.06249 -6.968751 0.02929687 -12.06249 6.468747 0.02929687 -12.06249 6.468747 -0.03320312 -12.06249 6.468747 0.02929687 -12.06249 -6.968751 -0.03320312 -12.06249 -6.968751 0.02929687 -12.06249 -6.968751 0.02929687 -12.06249 6.468747 -0.03320312 -12.06249 -6.968751 -0.03320312 -12.06249 6.468747 0.02929687 -12.06249 -6.968751 -0.03320312 16.0625 -6.968751 -0.03320312 -12.06249 -6.968751 0.02929687 16.0625 -6.968751 0.02929687 16.0625 -6.968751 0.02929687 -12.06249 -6.968751 -0.03320312 16.0625 -6.968751 -0.03320312 -12.06249 -6.968751 0.02929687 16.0625 -6.968751 -0.03320312 16.0625 -6.968751 0.02929687 16.0625 6.468747 -0.03320312 -12.06249 6.468747 -0.03320312 16.0625 6.468747 0.02929687 -12.06249 6.468747 0.02929687 -12.06249 6.468747 0.02929687 16.0625 6.468747 -0.03320312 -12.06249 6.468747 -0.03320312 16.0625 6.468747 0.02929687 16.0625 6.468747 -0.03320312 16.0625 6.468747 0.02929687 16.0625 6.468747 -0.03320312 16.0625 -6.968751 0.02929687 16.0625 -6.968751 -0.03320312 16.0625 6.468747 -0.03320312 16.0625 6.468747 0.02929687 16.0625 6.468747 -0.03320312 16.0625 -6.968751 0.02929687 16.0625 -6.968751</float_array>
+          <technique_common>
+            <accessor source="#ID546_003-mesh-positions-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID546_003-mesh-normals">
+          <float_array id="ID546_003-mesh-normals-array" count="12">0 1 0 0 0 1 0 0 -1 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#ID546_003-mesh-normals-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID546_003-mesh-vertices">
+          <input semantic="POSITION" source="#ID546_003-mesh-positions"/>
+        </vertices>
+        <lines count="12">
+          <input semantic="VERTEX" source="#ID546_003-mesh-vertices" offset="0"/>
+          <p>9 8 10 8 11 10 11 9 8 20 21 20 10 21 30 9 31 11 31 30 20 30 21 31</p>
+        </lines>
+        <triangles material="material_223-material" count="8">
+          <input semantic="VERTEX" source="#ID546_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID546_003-mesh-normals" offset="1"/>
+          <p>4 3 5 3 6 3 7 3 6 3 5 3 16 2 17 2 18 2 19 2 18 2 17 2 26 1 27 1 28 1 29 1 28 1 27 1 36 0 37 0 38 0 39 0 38 0 37 0</p>
+        </triangles>
+        <triangles material="material_0_139-material" count="8">
+          <input semantic="VERTEX" source="#ID546_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID546_003-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 1 0 0 0 3 0 12 1 13 1 14 1 13 1 12 1 15 1 22 2 23 2 24 2 23 2 22 2 25 2 32 3 33 3 34 3 33 3 32 3 35 3</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID554_002-mesh" name="ID554.002">
+      <mesh>
+        <source id="ID554_002-mesh-positions">
+          <float_array id="ID554_002-mesh-positions-array" count="36">0 14.0625 -6.718749 0 -14.0625 6.718749 0 -14.0625 -6.718749 0 14.0625 6.718749 0 14.0625 6.718749 0 14.0625 -6.718749 0 -14.0625 6.718749 0 -14.0625 -6.718749 0 14.0625 -6.718749 0 -14.0625 -6.718749 0 14.0625 6.718749 0 -14.0625 6.718749</float_array>
+          <technique_common>
+            <accessor source="#ID554_002-mesh-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID554_002-mesh-normals">
+          <float_array id="ID554_002-mesh-normals-array" count="6">1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID554_002-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID554_002-mesh-map-0">
+          <float_array id="ID554_002-mesh-map-0-array" count="24">0.5517919 0.0667411 0.03095853 0.3155837 0.03095853 0.0667411 0.03095853 0.3155837 0.5517919 0.0667411 0.5517919 0.3155837 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID554_002-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID554_002-mesh-vertices">
+          <input semantic="POSITION" source="#ID554_002-mesh-positions"/>
+        </vertices>
+        <lines count="4">
+          <input semantic="VERTEX" source="#ID554_002-mesh-vertices" offset="0"/>
+          <p>9 8 8 10 10 11 11 9</p>
+        </lines>
+        <triangles material="material_223-material" count="2">
+          <input semantic="VERTEX" source="#ID554_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID554_002-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID554_002-mesh-map-0" offset="2" set="0"/>
+          <p>4 1 6 5 1 7 6 1 8 7 1 9 6 1 10 5 1 11</p>
+        </triangles>
+        <triangles material="Metal_Aluminum_Anodized_016-material" count="2">
+          <input semantic="VERTEX" source="#ID554_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID554_002-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID554_002-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="SketchUp_778" name="SketchUp.778" type="NODE">
+        <matrix sid="transform">-1.11027e-9 0.0254 0 -0.2798941 -0.0254 -1.11027e-9 0 3.59946e-5 0 0 0.0254 0.0127652 0 0 0 1</matrix>
+        <instance_geometry url="#ID546_003-mesh" name="SketchUp.778">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material_223-material" target="#material_223-material"/>
+              <instance_material symbol="material_0_139-material" target="#material_0_139-material"/>
+              <instance_material symbol="edge_color000255_245-material" target="#edge_color000255_245-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="SketchUp_777" name="SketchUp.777" type="NODE">
+        <matrix sid="transform">-1.11027e-9 0.0254 0 -0.2290939 -0.0254 -1.11027e-9 0 8.794e-4 0 0 0.0254 0.006415159 0 0 0 1</matrix>
+        <instance_geometry url="#ID554_002-mesh" name="SketchUp.777">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material_223-material" target="#material_223-material">
+                <bind_vertex_input semantic="ID564" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Metal_Aluminum_Anodized_016-material" target="#Metal_Aluminum_Anodized_016-material">
+                <bind_vertex_input semantic="ID564" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="edge_color000255_245-material" target="#edge_color000255_245-material">
+                <bind_vertex_input semantic="ID564" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
