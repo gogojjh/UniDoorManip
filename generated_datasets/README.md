@@ -4,31 +4,40 @@ This directory contains procedurally generated articulated object assets for doo
 
 ## 📊 Dataset Statistics
 
-| Category              | Asset Count | Description                                          |
-|-----------------------|-------------|------------------------------------------------------|
-| RoundDoor_ccw_pull    | 27          | Round knob counterclockwise + pull door              |
-| RoundDoor_ccw_push    | 27          | Round knob counterclockwise + push door              |
-| RoundDoor_cw_pull     | 27          | Round knob clockwise + pull door                     |
-| RoundDoor_cw_push     | 27          | Round knob clockwise + push door                     |
-| LeverDoor_ccw_pull    | 30          | Lever handle counterclockwise + pull door            |
-| LeverDoor_ccw_push    | 30          | Lever handle counterclockwise + push door            |
-| LeverDoor_cw_pull     | 30          | Lever handle clockwise + pull door                   |
-| LeverDoor_cw_push     | 30          | Lever handle clockwise + push door                   |
-| Cabinet_ccw_pull      | 14          | Cabinet: handle counterclockwise + pull door         |
-| Cabinet_cw_pull       | 14          | Cabinet: handle clockwise + pull door                |
-| Fridge_ccw_pull       | 11          | Fridge: handle counterclockwise + pull door          |
-| Fridge_cw_pull        | 11          | Fridge: handle clockwise + pull door                 |
-| Safe_ccw_pull         | 19          | Safe: dial handle counterclockwise + pull door       |
-| Safe_cw_pull          | 19          | Safe: dial handle clockwise + pull door              |
-| Car_pull              | 10          | Vehicle doors (fixed handle) + pull                  |
-| Window_ccw_pull       | 35          | Window: handle counterclockwise + pull               |
-| Window_cw_pull        | 35          | Window: handle clockwise + pull                      |
-| **Total**             | **365**     | -                                                    |
+| Category                  | Asset Count | Description                                          |
+|---------------------------|-------------|------------------------------------------------------|
+| RoundDoor_ccw_pull        | 26          | Round knob counterclockwise + pull door              |
+| RoundDoor_ccw_push        | 26          | Round knob counterclockwise + push door              |
+| RoundDoor_cw_pull         | 26          | Round knob clockwise + pull door                     |
+| RoundDoor_cw_push         | 26          | Round knob clockwise + push door                     |
+| RoundDoor_direct_pull     | 26          | Round knob fixed (zero angle) + pull door            |
+| RoundDoor_direct_push     | 26          | Round knob fixed (zero angle) + push door            |
+| LeverDoor_ccw_pull        | 29          | Lever handle counterclockwise + pull door            |
+| LeverDoor_ccw_push        | 29          | Lever handle counterclockwise + push door            |
+| LeverDoor_cw_pull         | 29          | Lever handle clockwise + pull door                   |
+| LeverDoor_cw_push         | 29          | Lever handle clockwise + push door                   |
+| LeverDoor_direct_pull     | 29          | Lever handle fixed (zero angle) + pull door          |
+| LeverDoor_direct_push     | 29          | Lever handle fixed (zero angle) + push door          |
+| Cabinet_ccw_pull          | 13          | Cabinet: handle counterclockwise + pull door         |
+| Cabinet_cw_pull           | 13          | Cabinet: handle clockwise + pull door                |
+| Cabinet_direct_pull       | 13          | Cabinet: handle fixed (zero angle) + pull door       |
+| Fridge_ccw_pull           | 10          | Fridge: handle counterclockwise + pull door          |
+| Fridge_cw_pull            | 10          | Fridge: handle clockwise + pull door                 |
+| Fridge_direct_pull        | 10          | Fridge: handle fixed (zero angle) + pull door        |
+| Safe_ccw_pull             | 19          | Safe: dial handle counterclockwise + pull door       |
+| Safe_cw_pull              | 19          | Safe: dial handle clockwise + pull door              |
+| Safe_direct_pull          | 19          | Safe: dial handle fixed (zero angle) + pull door     |
+| Car_pull                  | 9           | Vehicle doors (fixed handle) + pull                  |
+| Car_direct_pull           | 9           | Vehicle doors (fixed handle) + pull                  |
+| Window_ccw_pull           | 34          | Window: handle counterclockwise + pull               |
+| Window_cw_pull            | 34          | Window: handle clockwise + pull                      |
+| Window_direct_pull        | 34          | Window: handle fixed (zero angle) + pull door        |
+| **Total**                 | **576**     | -                                                    |
 
 ### Naming Convention
 
 Door variants follow a two-axis scheme: `{Type}_{handle}_{action}`
-- **handle**: `ccw` (counterclockwise from front view) or `cw` (clockwise)
+- **handle**: `ccw` (counterclockwise from front view), `cw` (clockwise), or `direct` (handle fixed at zero angle, no handle rotation)
 - **action**: `pull` (door opens toward viewer) or `push` (door opens away)
 
 ## 📁 Directory Structure
@@ -36,23 +45,32 @@ Door variants follow a two-axis scheme: `{Type}_{handle}_{action}`
 ```
 generated_datasets/
 ├── README.md                    # This file
-├── Cabinet_ccw_pull/           # Cabinet: handle counterclockwise + pull
-├── Cabinet_cw_pull/            # Cabinet: handle clockwise + pull
+├── Cabinet_ccw_pull/            # Cabinet: handle counterclockwise + pull
+├── Cabinet_cw_pull/             # Cabinet: handle clockwise + pull
+├── Cabinet_direct_pull/         # Cabinet: handle fixed (zero angle) + pull
 ├── Car_pull/                    # Car door assets (fixed handle) + pull
-├── Fridge_ccw_pull/            # Fridge: handle counterclockwise + pull
-├── Fridge_cw_pull/             # Fridge: handle clockwise + pull
-├── LeverDoor_ccw_pull/         # Lever: counterclockwise + pull
+├── Car_direct_pull/             # Car door assets (fixed handle) + pull
+├── Fridge_ccw_pull/             # Fridge: handle counterclockwise + pull
+├── Fridge_cw_pull/              # Fridge: handle clockwise + pull
+├── Fridge_direct_pull/          # Fridge: handle fixed (zero angle) + pull
+├── LeverDoor_ccw_pull/          # Lever: counterclockwise + pull
 ├── LeverDoor_ccw_push/          # Lever: counterclockwise + push
 ├── LeverDoor_cw_pull/           # Lever: clockwise + pull
 ├── LeverDoor_cw_push/           # Lever: clockwise + push
+├── LeverDoor_direct_pull/       # Lever: handle fixed (zero angle) + pull
+├── LeverDoor_direct_push/       # Lever: handle fixed (zero angle) + push
 ├── RoundDoor_ccw_pull/          # Round: counterclockwise + pull
 ├── RoundDoor_ccw_push/          # Round: counterclockwise + push
 ├── RoundDoor_cw_pull/           # Round: clockwise + pull
 ├── RoundDoor_cw_push/           # Round: clockwise + push
+├── RoundDoor_direct_pull/       # Round: handle fixed (zero angle) + pull
+├── RoundDoor_direct_push/       # Round: handle fixed (zero angle) + push
 ├── Safe_ccw_pull/               # Safe: dial handle counterclockwise + pull
 ├── Safe_cw_pull/                # Safe: dial handle clockwise + pull
-├── Window_ccw_pull/            # Window: handle counterclockwise + pull
-└── Window_cw_pull/             # Window: handle clockwise + pull
+├── Safe_direct_pull/            # Safe: dial handle fixed (zero angle) + pull
+├── Window_ccw_pull/             # Window: handle counterclockwise + pull
+├── Window_cw_pull/              # Window: handle clockwise + pull
+└── Window_direct_pull/          # Window: handle fixed (zero angle) + pull
 ```
 
 ## 🗂️ Asset Structure
